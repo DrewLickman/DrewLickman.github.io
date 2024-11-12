@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drew Lickman - Computer Science & Entrepreneurship Portfolio</title>
+    <meta name="description" content="Drew Lickman's portfolio showcasing skills in computer science and entrepreneurship.">
+    <meta name="keywords" content="Drew Lickman, Computer Science, Entrepreneurship, Finance, Portfolio, Resume"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 25px;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+        }
+        .experience-item h3, .project-item h3, .education-item h3 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        .date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-item {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Drew Lickman</h1>
+            <p>Computer Science & Entrepreneurship Professional</p>
+            <div class="contact-info">
+                <p style="display: inline;"><i class="fas fa-map-marker-alt"></i> Murfreesboro, TN</p>
+                <p style="display: inline;"><i class="fas fa-phone"></i> 540-322-7186</p>
+                <p style="display: inline;"><i class="fas fa-envelope"></i> contact.drew.business@gmail.com</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p>Ambitious Computer Science student and budding entrepreneur with a strong foundation in
+                software development, business principles, and finances. Demonstrated leadership in academic projects
+                and extracurricular activities. Passionate about leveraging technology to drive innovation 
+                and growth in organizations.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>Middle Tennessee State University, Murfreesboro, TN</p>
+                <p class="date">Expected Graduation: December 2024</p>
+                <p><strong>GPA:</strong> 3.63 | <strong>Honors:</strong> Dean's List (4 times)</p>
+                <p><strong>Key Coursework:</strong> Data Structures & Algorithms, Computer Systems & Organization, Computer Graphics, Software Engineering, Visual Programming, New Venture Creation, Financial Management, Marketing for Entrepreneurs</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Student Technology Assistant • Team Leader</h3>
+                <p>MTSU Walker Library, Murfreesboro, TN</p>
+                <p class="date">2022 - Present</p>
+                <ul>
+                    <li>Spearheaded process improvements, resulting in increased efficiency of daily operations</li>
+                    <li>Developed comprehensive training materials and instruction sheets for new team members</li>
+                    <li>Authored batch scripts to streamline login processes, saving time for all library staff</li>
+                    <li>Created detailed documentation for various software programs used by employees</li>
+                    <li>Identified and addressed safety hazards, enhancing workplace safety</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Club Officer • Secretary</h3>
+                <p>MTSU Esports Club</p>
+                <p class="date">2020 - 2022</p>
+                <ul>
+                    <li>Played a key role in rebuilding and organizing the MTSU Esports Club</li>
+                    <li>Maintained detailed meeting notes, club calendar, and task lists</li>
+                    <li>Received "Outstanding Student" medal for exceptional contributions to the club</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Artificial Intelligence</div>
+                <div class="skill-item">C#</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">Unity</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">Microsoft Word</div>
+                <div class="skill-item">Microsoft PowerPoint</div>
+                <div class="skill-item">Microsoft Excel</div>
+                <div class="skill-item">Adobe Photoshop</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Natural Language Processing: N-Gram Language Model</h3>
+                <p class="date">Natural Language Processing class, Fall 2024</p>
+                <ul>
+                    <li>Developed an n-gram language model capable of generating Shakespearean text</li>
+                    <li>Utilized Python and the NLTK library to implement the model and train it on large datasets</li>
+                    <li>Optimized the model for performance and accuracy, achieving a significant improvement in generated text quality</li>
+                    <li><a href="https://github.com/MagicalMongoose/NLP/tree/main/Projects/Project%202">N-Gram Repository</a></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>2D Platformer Video Game: "Code Runner"</h3>
+                <p class="date">Visual Programming class, Spring 2024</p>
+                <ul>
+                    <li>Led a team of 4 developers to create a 2D platformer game using Unity</li>
+                    <li>Designed core gameplay mechanics and managed project using GitHub and Trello</li>
+                    <li>Programmed critical features including player movement, collision detection, and level design</li>
+                    <li><a href="https://github.com/MagicalMongoose/Code-Runner">Code Runner Repository</a></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Driving Simulator Data Analysis Web Application</h3>
+                <p class="date">Software Engineering class, Fall 2023</p>
+                <ul>
+                    <li>Directed a team of 3 to develop a web application for visualizing driving simulator data</li>
+                    <li>Implemented data processing algorithms and created interactive charts using D3.js</li>
+                    <li>Utilized Agile methodologies to ensure timely delivery of project milestones</li>
+                    <li><a href="https://github.com/VU-RASL/Vanderbilt-Driving-Simulator">Driving Simulator Analysis Dashboard Repository</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Leadership & Soft Skills</h2>
+            <ul>
+                <li>Strong leadership and team management abilities</li>
+                <li>Excellent problem-solving and critical thinking skills</li>
+                <li>Effective written and verbal communication</li>
+                <li>Adaptability and quick learning in fast-paced environments</li>
+                <li>Proficient in project management and organization</li>
+                <li>Attention to detail and ability to ensure high-quality work</li>
+                <li>Passion for learning new technologies and sharing knowledge with others</li>
+                <li>Experience in teaching and mentoring team members to improve skills</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new opportunities, creative projects, or innovations in the tech world.</p>
+            <a href="mailto:contact.drew.business@gmail.com" class="cta-button">Contact Me</a>
+            <a href="https://www.linkedin.com/in/drew-lickman-46406719a/" class="cta-button">LinkedIn</a>
+            <a href="https://github.com/MagicalMongoose" class="cta-button">GitHub</a>
+        </section>
+    </div>
+</body>
+</html>
