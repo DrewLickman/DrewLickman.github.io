@@ -40,11 +40,12 @@
         }
         .box {
             background: #ffffff;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             color: #000000;
-            border: 1px solid #cccccc;
+            border: 2px solid #bdbdbd;
             border-radius: 8px;
+            margin-top: 10px;
             margin-bottom: 10px;
         }
         .links {
@@ -145,8 +146,12 @@
 </head>
 
 <body>
-    <h1>Drew Lickman's Homepage</h1>
-    <p class="subtitle">Passionate about using technology to make a positive impact on the world</p>
+    <canvas id="voronoiCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
+
+    <div class="box">
+        <h1>Drew Lickman's Homepage</h1>
+        <p class="subtitle">Passionate about using technology to make a positive impact on the world</p>
+    </div>
     <div class="box">
         <h2>Tech Stack</h2>
         <div class="tech-grid">
@@ -210,10 +215,12 @@
         </div>
     </div>
 
-    <div class="social-links">
-        <a href="https://linkedin.com/in/drew-lickman-46406719a" class="social-link" target="_blank">LinkedIn</a>
-        <a href="https://github.com/MagicalMongoose" class="social-link" target="_blank">GitHub</a>
-        <a href="mailto:contact.drew.business@gmail.com" class="social-link">Email</a>
+    <div class="box">
+        <div class="social-links">
+            <a href="https://linkedin.com/in/drew-lickman-46406719a" class="social-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/MagicalMongoose" class="social-link" target="_blank">GitHub</a>
+            <a href="mailto:contact.drew.business@gmail.com" class="social-link">Email</a>
+        </div>
     </div>
 
     <script>
@@ -236,6 +243,120 @@
             currentIndex = (currentIndex + 1) % cards.length;
             updateCarousel();
         });
+
+        // Voronoi Pattern Generator Class
+        class VoronoiPattern {
+            constructor(canvasId, numPoints = 50) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+                this.numPoints = numPoints;
+                this.points = [];
+                
+                // Bind event listeners
+                window.addEventListener('resize', () => this.init());
+                
+                // Initial setup
+                this.init();
+            }
+
+            resizeCanvas() {
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+            }
+
+            generatePoints() {
+                this.points = [];
+                for (let i = 0; i < this.numPoints; i++) {
+                    const hue = Math.floor(Math.random() * 360);
+                    this.points.push({
+                        x: Math.random() * this.canvas.width,
+                        y: Math.random() * this.canvas.height,
+                        color: `hsl(${hue}, 100%, 30%)`
+                    });
+                }
+            }
+
+            drawVoronoi() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+                const cellSize = 10;
+                const regions = {};
+
+                // First pass: Fill all cells
+                for (let x = 0; x < this.canvas.width; x += cellSize) {
+                    for (let y = 0; y < this.canvas.height; y += cellSize) {
+                        let closestPoint = null;
+                        let minDistance = Infinity;
+
+                        for (const point of this.points) {
+                            const distance = Math.hypot(point.x - x, point.y - y);
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                closestPoint = point;
+                            }
+                        }
+
+                        this.ctx.fillStyle = closestPoint.color;
+                        this.ctx.fillRect(x, y, cellSize, cellSize);
+
+                        const key = `${x},${y}`;
+                        if (!regions[key]) {
+                            regions[key] = {
+                                color: closestPoint.color,
+                                x,
+                                y
+                            };
+                        }
+                    }
+                }
+
+                // Second pass: Draw borders
+                this.ctx.strokeStyle = 'black';
+                this.ctx.lineWidth = 1;
+                this.ctx.beginPath();
+
+                for (const key in regions) {
+                    const cell = regions[key];
+                    const x = cell.x;
+                    const y = cell.y;
+
+                    const rightKey = `${x + cellSize},${y}`;
+                    if (regions[rightKey] && regions[rightKey].color !== cell.color) {
+                        this.ctx.moveTo(x + cellSize, y);
+                        this.ctx.lineTo(x + cellSize, y + cellSize);
+                    }
+
+                    const bottomKey = `${x},${y + cellSize}`;
+                    if (regions[bottomKey] && regions[bottomKey].color !== cell.color) {
+                        this.ctx.moveTo(x, y + cellSize);
+                        this.ctx.lineTo(x + cellSize, y + cellSize);
+                    }
+                }
+
+                this.ctx.stroke();
+
+                // // Third pass: Draw points
+                // this.ctx.fillStyle = 'white';
+                // this.ctx.strokeStyle = 'black';
+                // this.ctx.lineWidth = 2;
+                
+                // this.points.forEach(point => {
+                //     this.ctx.beginPath();
+                //     this.ctx.arc(point.x, point.y, 5, 0, Math.PI * 2);
+                //     this.ctx.fill();
+                //     this.ctx.stroke();
+                // });
+            }
+
+            init() {
+                this.resizeCanvas();
+                this.generatePoints();
+                this.drawVoronoi();
+            }
+        }
+
+        // Initialize Voronoi Pattern
+        const voronoi = new VoronoiPattern('voronoiCanvas');
     </script>
 </body>
 
