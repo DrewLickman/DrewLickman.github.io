@@ -13,16 +13,6 @@ A clean, responsive portfolio website showcasing professional experience, projec
 ## Project Structure
 
 ```
-.
-├── index.html
-├── Resumes/
-│   ├── Technology Specialist.html
-│   ├── Financial Advisor Resume.html
-│   ├── Technology Specialist.pdf
-│   ├── Financial Advisor Resume.pdf
-│   └── styles.css
-└── README.md
-```
 
 This README provides a clear overview of your portfolio website, its structure, and how to set it up. It references the key features shown in your HTML files and provides proper documentation for anyone who might want to understand or use your project.
 
@@ -40,16 +30,19 @@ This README provides a clear overview of your portfolio website, its structure, 
 - Professional introduction
 - Resume download options
 - Interactive project carousel featuring:
-  - NLP Text Generator
   - NLP Pipeline Project
+  - NLP Text Generator
   - Code Runner Game
-  - Driving Simulator Analysis Tool
+- Deployed apps featuring:
+  - Financial Data Filtering App
+  - Random Generator App
 - Social media and contact links
 
 ### Resume Pages
 - Professionally styled HTML/CSS resumes
 - Downloadable PDF versions
 - Separate versions for:
+  - Entrepreneurial Founder role
   - Technology Specialist role
   - Financial Advisor role
 
