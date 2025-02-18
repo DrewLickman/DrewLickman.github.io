@@ -1,4 +1,4 @@
-# [Drew Lickman's Portfolio Website](https://magicalmongoose.github.io)
+# [Drew Lickman's Portfolio Website](https://drewlickman.github.io)
 
 A clean, responsive portfolio website showcasing professional experience, projects, and contact information.
 
@@ -55,8 +55,8 @@ This README provides a clear overview of your portfolio website, its structure, 
 ## Contact
 
 - Email: contact.drew.business@gmail.com
-- LinkedIn: [Drew Lickman](https://linkedin.com/in/drew-lickman-46406719a)
-- GitHub: [MagicalMongoose](https://github.com/MagicalMongoose)
+- LinkedIn: [Drew Lickman](https://linkedin.com/in/drew-lickman)
+- GitHub: [DrewLickman](https://github.com/DrewLickman)
 
 ## License
 
