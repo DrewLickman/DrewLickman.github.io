@@ -156,30 +156,8 @@
     </div>
     <div class="box">
         <h2>Tech Stack</h2>
-        <div class="tech-grid">
-            <!-- Languages -->
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">C#</span>
-            <span class="tech-pill">C++</span>
-            <span class="tech-pill">C</span>
-            <span class="tech-pill">JavaScript</span>
-            <span class="tech-pill">HTML/CSS</span>
-
-            <!-- Tools & Technologies -->
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">TailwindCSS</span>
-            <span class="tech-pill">Vercel Deployment</span>
-            <span class="tech-pill">Github</span>
-            <span class="tech-pill">VS Code</span>
-            <span class="tech-pill">Unity</span>
-            <span class="tech-pill">Adobe Suite</span>
-            <span class="tech-pill">Microsoft Office</span>
-
-            <!-- Specialties -->
-            <span class="tech-pill">AI/ML</span>
-            <span class="tech-pill">NLP</span>
-            <span class="tech-pill">Software Development</span>
-            <span class="tech-pill">Computer Graphics</span>
+        <div class="tech-grid" id="techGrid">
+            <!-- Tech pills will be dynamically inserted here -->
         </div>
     </div>
 
@@ -245,6 +223,32 @@
     </div>
 
     <script>
+        // Tech stack array organized by categories
+        const techStack = {
+            "Languages": ["Python", "C#", "C++", "C", "JavaScript", "HTML/CSS"],
+            "Tools & Technologies": ["React", "TailwindCSS", "Vercel Deployment", "Github", "VS Code", "Unity", "Adobe Suite", "Microsoft Office"],
+            "Specialties": ["AI/ML", "NLP", "Software Development", "Computer Graphics"]
+        };
+
+        // Function to populate tech grid
+        function populateTechGrid() {
+            const techGrid = document.getElementById('techGrid');
+            
+            // Loop through each category
+            for (const category in techStack) {
+                // Add each technology in the category
+                techStack[category].forEach(tech => {
+                    const techPill = document.createElement('span');
+                    techPill.className = 'tech-pill';
+                    techPill.textContent = tech;
+                    techGrid.appendChild(techPill);
+                });
+            }
+        }
+
+        // Call the function when page loads
+        document.addEventListener('DOMContentLoaded', populateTechGrid);
+
         const carousel = document.querySelector('.carousel-inner');
         const cards = document.querySelectorAll('.project-card');
         const prevBtn = document.querySelector('.prev-btn');
