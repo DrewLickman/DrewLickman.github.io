@@ -452,7 +452,8 @@ function initContactForm() {
         console.log('Form submitted:', { name, email, subject, message });
         
         // Show a success message (in a real app, you'd wait for server response)
-        alert('Thanks for your message! I\'ll get back to you soon.');
+        // alert('Thanks for your message! I\'ll get back to you soon.');
+        alert('This is not implemented yet. Please manually email me at contact.drew.business@gmail.com.');
         
         // Reset the form
         contactForm.reset();
