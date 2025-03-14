@@ -4,197 +4,636 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Drew Lickman - Software Developer Portfolio - Showcasing projects and skills in software development, AI/ML, and NLP">
-    <title>Drew Lickman - Software Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Drew Lickman - Software Developer Portfolio - Showcasing projects and skills in AI/ML, NLP, and software development">
+    <title>Drew Lickman | Software Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
-    <div class="box">
-        <div class="profile-container">
-            <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman's Profile Picture" class="profile-pic">
-            <h1>DrewLickman = new SoftwareDeveloper();</h1>
+<body class="light-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">DrewLickman<span class="accent">.</span>github<span class="accent">.</span>io</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
         </div>
-        <p class="subtitle">Passionate about using technology to make a positive impact on the world</p>
-    </div>
+    </nav>
 
-    <div class="box">
-        <h2>Tech Stack</h2>
-        <div class="tech-grid" id="techGrid">
-            <!-- Tech pills will be dynamically inserted here -->
-        </div>
-    </div>
-
-    <div class="box">
-        <h2>Resumes</h2>
-        <div class="links">
-            <a href="Resumes/Software Developer.pdf" class="resume-link"><i class="fas fa-file-pdf"></i> Software Developer</a>
-            <a href="Resumes/Financial Advisor.pdf" class="resume-link"><i class="fas fa-file-pdf"></i> Financial Advisor</a>
-            <a href="Resumes/Entrepreneurial Co-Founder.pdf" class="resume-link"><i class="fas fa-file-pdf"></i> Entrepreneurial Co-Founder</a>
-        </div>
-    </div>
-
-    <div class="box">
-        <div class="carousel">
-            <h2 class="carousel-title">Projects</h2>
-            <div class="carousel-container">
-                <button class="carousel-btn prev-btn">←</button>
-                <div class="carousel-inner">
-                    <div class="project-card">
-                        <h3>Natural Language Processing: Pipeline Project</h3>
-                        <p class="year">2024</p>
-                        <p>Created NLP pipeline for text preprocessing and analysis, enhancing data quality for machine learning models. Implemented various text analysis techniques, including summarization, sentiment analysis, and question-answering.</p>
-                        <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines" target="_blank" class="project-link"><i class="fab fa-github"></i> View Project</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles-container" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman" class="profile-image">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Drew Lickman<span class="accent">.</span></h1>
+                    <div class="hero-subtitle">Software Developer & AI Enthusiast</div>
+                    <div class="typing-container">
+                        <span class="typing-prefix">Specializing in...</span>
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
                     </div>
-                    <div class="project-card">
-                        <h3>Natural Language Processing: N-Gram Language Model</h3>
-                        <p class="year">2024</p>
-                        <p>Developed Shakespearean text generator using Python and NLTK library. Optimized model performance and accuracy with significant quality improvements.</p>
-                        <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator" target="_blank" class="project-link"><i class="fab fa-github"></i> View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>2D Platformer: "Code Runner"</h3>
-                        <p class="year">2024</p>
-                        <p>Led 5-person team to create Unity 2d platforming video game, managing project via GitHub and Trello. Programmed core mechanics including player movement and enemy AI systems.</p>
-                        <a href="https://github.com/DrewLickman/Code-Runner" target="_blank" class="project-link"><i class="fab fa-github"></i> View Project</a>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
                     </div>
                 </div>
-                <button class="carousel-btn next-btn">→</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My journey as a software developer</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <div class="about-image-container">
+                        <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman">
+                        <div class="image-bg"></div>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <h3>Hello, I'm Drew<span class="accent">.</span></h3>
+                    <p>I'm a software developer with a strong foundation in computer science and a passion for creating technology solutions that make a positive impact.</p>
+                    <p>My journey into computer science began in high school with Advanced Placement Computer Science classes. 
+                        I was at the top of my class, so I chose to continue my studies at Middle Tennessee State University, where I honed my skills in Python, JavaScript, C#, and more. 
+                        I'm particularly passionate about AI/ML, NLP, and Game Development.</p>
+                    <p>In my day-to-day life, I often find the need to automate or analyze something. I find JavaScript injections and PowerShell scripts to often be helpful. 
+                        I enjoy exploring new technologies and finding ways to apply my skills to solve real-world problems.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-value">7+</span>
+                            <span class="stat-label">Years of Coding</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">3.6</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="Resumes/Software Developer.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category reveal">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Python">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4 class="skill-name">Python</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="JavaScript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4 class="skill-name">JavaScript</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="C#">
+                            <div class="skill-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <h4 class="skill-name">C#</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="C++">
+                            <div class="skill-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4 class="skill-name">C++</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="C">
+                            <div class="skill-icon">
+                                <i class="fas fa-c"></i>
+                            </div>
+                            <h4 class="skill-name">C</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="HTML/CSS">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4 class="skill-name">HTML/CSS</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Technologies
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Cursor">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="skill-name">Cursor</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Claude">
+                            <div class="skill-icon">
+                                <i class="fas fa-star-of-life"></i>
+                            </div>
+                            <h4 class="skill-name">Claude</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="ChatGPT">
+                            <div class="skill-icon">
+                                <i class="fas fa-star-of-life"></i>
+                            </div>
+                            <h4 class="skill-name">ChatGPT</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Grok">
+                            <div class="skill-icon">
+                                <i class="fas fa-star-of-life"></i>
+                            </div>
+                            <h4 class="skill-name">Grok</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="React">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4 class="skill-name">React</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="TailwindCSS">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4 class="skill-name">TailwindCSS</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="GitHub">
+                            <div class="skill-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h4 class="skill-name">GitHub</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Unity">
+                            <div class="skill-icon">
+                                <i class="fab fa-unity"></i>
+                            </div>
+                            <h4 class="skill-name">Unity</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        Specialties
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="AI/ML">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4 class="skill-name">AI/ML</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="NLP">
+                            <div class="skill-icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <h4 class="skill-name">NLP</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Software Development">
+                            <div class="skill-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4 class="skill-name">Game Development</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Computer Graphics">
+                            <div class="skill-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <h4 class="skill-name">Computer Graphics</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">A showcase of my work</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="game">Game Dev</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal" data-category="ai-ml">
+                    <div class="project-image">
+                        <img src="Assets/projects/nlp-pipeline.jpg" alt="NLP Pipeline Project">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">NLP Pipeline Project</h3>
+                        <p class="project-description">Created an NLP pipeline for text preprocessing and analysis.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="ai-ml">
+                    <div class="project-image">
+                        <img src="Assets/projects/ngram-model.jpg" alt="N-Gram Language Model">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">NLTK</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">N-Gram Language Model</h3>
+                        <p class="project-description">Developed a Shakespearean text generator using Python and NLTK library with optimized performance and accuracy.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="game">
+                    <div class="project-image">
+                        <img src="Assets/projects/code-runner.jpg" alt="Code Runner Game">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Game Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Code Runner</h3>
+                        <p class="project-description">Led a 5-person team to create a Unity 2D platforming video game, managing the project and programming core mechanics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/DrewLickman/Code-Runner" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <img src="Assets/projects/financial-app.jpg" alt="Financial Data Filtering App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Financial Data Filtering App</h3>
+                        <p class="project-description">Web application for viewing, sorting, and filtering public stock income statements with API integration.</p>
+                        <div class="project-links">
+                            <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <img src="Assets/projects/random-generator.jpg" alt="Random Generator App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Random Generator App</h3>
+                        <p class="project-description">A fun and practical tool for flipping coins, rolling dice, drawing cards, and spinning wheels.</p>
+                        <div class="project-links">
+                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-tabs">
+                    <button class="timeline-tab active" data-target="education">Education</button>
+                    <button class="timeline-tab" data-target="work">Work Experience</button>
+                </div>
+                
+                <div class="timeline-content" id="education-timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020 - 2024</div>
+                        <div class="timeline-content-box">
+                            <h3>B.S. in Computer Science & Minor in Entrepreneurship</h3>
+                            <h4>Middle Tennessee State University</h4>
+                            <p>3.6 GPA | Dean's List 4 times</p>
+                            <div class="timeline-details">
+                                <p><strong>Key Coursework:</strong> Natural Language Processing, Artificial Intelligence, Data Structures & Algorithms, Computer Graphics, Computer Systems, Software Engineering, Visual Programming, Linear Algebra, Data Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-content" id="work-timeline" style="display: none;">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 - 2025</div>
+                        <div class="timeline-content-box">
+                            <h3>Student Technology Assistant (Team Leader)</h3>
+                            <h4>MTSU Walker Library</h4>
+                            <div class="timeline-details">
+                                <p>As a Student Technology Assistant (Team Leader), I was responsible for ensuring the smooth operation of computer systems and providing technical support to users.</p>
+                                <ul>
+                                    <li>Automated login processes with batch scripts, saving staff time</li>
+                                    <li>Provided technical support and training across various software systems and hardware equipment</li>
+                                    <li>Developed and deployed updated training instructions for employees</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resume-download reveal">
+                <p>For more details, check out my full resumes:</p>
+                <div class="resume-buttons">
+                    <a href="Resumes/Software Developer.pdf" class="btn btn-resume" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Software Developer
+                    </a>
+                    <a href="Resumes/Financial Advisor.pdf" class="btn btn-resume" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Financial Advisor
+                    </a>
+                    <a href="Resumes/Entrepreneurial Co-Founder.pdf" class="btn btn-resume" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Entrepreneurial Co-Founder
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Murfreesboro, TN</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:contact.drew.business@gmail.com">contact.drew.business@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>540-322-7186</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/drew-lickman" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/DrewLickman" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container reveal">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">DrewLickman<span class="accent">.</span>github<span class="accent">.</span>io</span>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/drew-lickman" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/DrewLickman" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:contact.drew.business@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Drew Lickman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically injected -->
             </div>
         </div>
     </div>
 
-    <div class="box">
-        <h2>Deployments</h2>
-        <div class="deployment">
-            <h3>Financial Data Filtering App</h3>
-            <p class="year">2025</p>
-            <p>View, sort, and filter public stock income statements. Fetched publicly traded company income statement data via API and implemented frontend data sorting, filtering, and visualization.</p>
-            <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View App</a>
-            <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
-        </div>
-        <div class="deployment">
-            <h3>Random Generator App</h3>
-            <p class="year">2025</p>
-            <p>Flip coins, roll dice, draw cards, and spin the wheel! A fun and useful tool for random generation needs.</p>
-            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View App</a>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <div class="box">
-        <h2>Connect With Me</h2>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/drew-lickman" class="social-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/DrewLickman" class="social-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="mailto:contact.drew.business@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Drew Lickman. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Dark mode toggle functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = themeToggle.querySelector('i');
-            
-            // Check for saved theme preference or respect OS preference
-            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = localStorage.getItem('theme');
-            
-            if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
-                document.body.classList.add('dark-mode');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            }
-            
-            // Toggle theme when button is clicked
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                
-                // Update icon
-                if (document.body.classList.contains('dark-mode')) {
-                    themeIcon.classList.replace('fa-moon', 'fa-sun');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    themeIcon.classList.replace('fa-sun', 'fa-moon');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-        });
-
-        // Tech stack array organized by categories
-        const techStack = {
-            "Languages": ["Python", "C#", "C++", "C", "JavaScript", "HTML/CSS"],
-            "Tools & Technologies": ["React", "TailwindCSS", "Vercel Deployment", "Github", "VS Code", "Unity", "Adobe Suite", "Microsoft Office"],
-            "Specialties": ["AI/ML", "NLP", "Software Development", "Computer Graphics"]
-        };
-
-        // Function to populate tech grid
-        function populateTechGrid() {
-            const techGrid = document.getElementById('techGrid');
-            
-            // Loop through each category
-            for (const category in techStack) {
-                // Create a category header
-                const categoryHeader = document.createElement('div');
-                categoryHeader.className = 'tech-category';
-                categoryHeader.style.width = '100%';
-                categoryHeader.style.marginTop = '10px';
-                categoryHeader.style.marginBottom = '5px';
-                categoryHeader.style.fontWeight = 'bold';
-                categoryHeader.textContent = category;
-                techGrid.appendChild(categoryHeader);
-                
-                // Add each technology in the category
-                techStack[category].forEach(tech => {
-                    const techPill = document.createElement('span');
-                    techPill.className = 'tech-pill';
-                    techPill.textContent = tech;
-                    techGrid.appendChild(techPill);
-                });
-            }
-        }
-
-        // Carousel functionality
-        function setupCarousel() {
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const cards = document.querySelectorAll('.project-card');
-            let currentIndex = 0;
-
-            // Hide all cards initially except the first one
-            cards.forEach((card, index) => {
-                if (index !== 0) {
-                    card.style.display = 'none';
-                }
-            });
-
-            prevBtn.addEventListener('click', () => {
-                cards[currentIndex].style.display = 'none';
-                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-                cards[currentIndex].style.display = 'block';
-            });
-
-            nextBtn.addEventListener('click', () => {
-                cards[currentIndex].style.display = 'none';
-                currentIndex = (currentIndex + 1) % cards.length;
-                cards[currentIndex].style.display = 'block';
-            });
-        }
-
-        // Call the functions when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            populateTechGrid();
-            setupCarousel();
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
