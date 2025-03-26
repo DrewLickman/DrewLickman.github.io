@@ -101,7 +101,7 @@ function initScrollReveal() {
     
     const revealHandler = () => {
         const windowHeight = window.innerHeight;
-        const revealPoint = 150;
+        const revealPoint = 0;
         
         revealElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
