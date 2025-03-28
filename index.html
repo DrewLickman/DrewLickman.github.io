@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Drew Lickman - Software Developer Portfolio - Showcasing projects and skills in AI/ML, NLP, and software development">
+    <meta name="description"
+        content="Drew Lickman - Software Developer Portfolio - Showcasing projects and skills in AI/ML, NLP, and software development">
     <title>Drew Lickman | Software Developer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="light-mode">
@@ -19,7 +22,8 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <span class="logo-text">DrewLickman<span class="accent">.</span>github<span class="accent">.</span>io</span>
+                <span class="logo-text">DrewLickman<span class="accent">.</span>github<span
+                        class="accent">.</span>io</span>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
@@ -52,7 +56,7 @@
                 </div>
                 <div class="hero-text">
                     <h1 class="hero-title">Drew Lickman<span class="accent">.</span></h1>
-                    <div class="hero-subtitle">Software Developer & AI Enthusiast</div>
+                    <div class="hero-subtitle">Software Dev, <br>IT Specialist, <br>AI Enthusiast</div>
                     <div class="typing-container">
                         <span class="typing-prefix">Specializing in...</span>
                         <span class="typing-text" id="typingText"></span>
@@ -64,12 +68,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll down</p>
         </div>
     </section>
 
@@ -89,12 +87,17 @@
                 </div>
                 <div class="about-text reveal">
                     <h3>Hello, I'm Drew<span class="accent">.</span></h3>
-                    <p>I'm a software developer with a strong foundation in computer science and a passion for creating technology solutions that make a positive impact.</p>
-                    <p>My journey into computer science began in high school with Advanced Placement Computer Science classes. 
-                        I was at the top of my class, so I chose to continue my studies at Middle Tennessee State University, where I honed my skills in Python, JavaScript, C#, and more. 
+                    <p>I'm a software developer with a strong foundation in computer science and a passion for creating
+                        technology solutions that make a positive impact.</p>
+                    <p>My journey into computer science began in high school with Advanced Placement Computer Science
+                        classes.
+                        I was at the top of my class, so I chose to continue my studies at Middle Tennessee State
+                        University, where I honed my skills in Python, JavaScript, C#, and more.
                         I'm particularly passionate about AI/ML, NLP, and Game Development.</p>
-                    <p>In my day-to-day life, I often find the need to automate or analyze something. I find JavaScript injections and PowerShell scripts to often be helpful. 
-                        I enjoy exploring new technologies and finding ways to apply my skills to solve real-world problems.</p>
+                    <p>In my day-to-day life, I often find the need to automate or analyze something. I find JavaScript
+                        injections and PowerShell scripts to often be helpful.
+                        I enjoy exploring new technologies and finding ways to apply my skills to solve real-world
+                        problems.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-value">7+</span>
@@ -183,9 +186,18 @@
                                 <div class="skill-progress"></div>
                             </div>
                         </div>
+                        <div class="skill-card" data-skill="Svelte">
+                            <div class="skill-icon">
+                                <i class="fab fa-s"></i>
+                            </div>
+                            <h4 class="skill-name">Svelte</h4>
+                            <div class="skill-level">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category reveal">
                     <h3 class="category-title">
                         <i class="fas fa-tools"></i>
@@ -264,18 +276,9 @@
                                 <div class="skill-progress"></div>
                             </div>
                         </div>
-                        <div class="skill-card" data-skill="Svelte">
-                            <div class="skill-icon">
-                                <i class="fab fa-s"></i>
-                            </div>
-                            <h4 class="skill-name">Svelte</h4>
-                            <div class="skill-level">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category reveal">
                     <h3 class="category-title">
                         <i class="fas fa-brain"></i>
@@ -338,6 +341,63 @@
                 <button class="filter-btn" data-filter="game">Game Dev</button>
             </div>
             <div class="projects-grid">
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <img src="Assets/projects/Random-Generator-Thumbnail.png" alt="Random Generator App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Random Generator App</h3>
+                        <p class="project-description">A fun and practical tool for flipping coins, rolling dice,
+                            drawing cards, and spinning wheels.</p>
+                        <div class="project-links">
+                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank"
+                                class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/DrewLickman/Random-Generator-App" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <img src="Assets/projects/Financial-Data-Filtering-Thumbnail.png"
+                            alt="Financial Data Filtering App">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Financial Data Filtering App</h3>
+                        <p class="project-description">Web application for viewing, sorting, and filtering public stock
+                            income statements with API integration.</p>
+                        <div class="project-links">
+                            <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank"
+                                class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank"
+                                class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card reveal" data-category="ai-ml">
                     <div class="project-image">
                         <img src="Assets/projects/nlp-pipeline.jpg" alt="NLP Pipeline Project">
@@ -353,13 +413,14 @@
                         <h3 class="project-title">NLP Pipeline Project</h3>
                         <p class="project-description">Created an NLP pipeline for text preprocessing and analysis.</p>
                         <div class="project-links">
-                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines" target="_blank" class="project-link">
+                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines"
+                                target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card reveal" data-category="ai-ml">
                     <div class="project-image">
                         <img src="Assets/projects/ngram-model.jpg" alt="N-Gram Language Model">
@@ -373,15 +434,17 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">N-Gram Language Model</h3>
-                        <p class="project-description">Developed a Shakespearean text generator using Python and NLTK library with optimized performance and accuracy.</p>
+                        <p class="project-description">Developed a Shakespearean text generator using Python and NLTK
+                            library with optimized performance and accuracy.</p>
                         <div class="project-links">
-                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator" target="_blank" class="project-link">
+                            <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator"
+                                target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card reveal" data-category="game">
                     <div class="project-image">
                         <img src="Assets/projects/code-runner.jpg" alt="Code Runner Game">
@@ -395,7 +458,8 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Code Runner</h3>
-                        <p class="project-description">Led a 5-person team to create a Unity 2D platforming video game, managing the project and programming core mechanics.</p>
+                        <p class="project-description">Led a 5-person team to create a Unity 2D platforming video game,
+                            managing the project and programming core mechanics.</p>
                         <div class="project-links">
                             <a href="https://github.com/DrewLickman/Code-Runner" target="_blank" class="project-link">
                                 <i class="fab fa-github"></i> View Code
@@ -403,53 +467,10 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card reveal" data-category="web">
-                    <div class="project-image">
-                        <img src="Assets/projects/financial-app.jpg" alt="Financial Data Filtering App">
-                        <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">API</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Financial Data Filtering App</h3>
-                        <p class="project-description">Web application for viewing, sorting, and filtering public stock income statements with API integration.</p>
-                        <div class="project-links">
-                            <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card reveal" data-category="web">
-                    <div class="project-image">
-                        <img src="Assets/projects/random-generator.jpg" alt="Random Generator App">
-                        <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">Web</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Random Generator App</h3>
-                        <p class="project-description">A fun and practical tool for flipping coins, rolling dice, drawing cards, and spinning wheels.</p>
-                        <div class="project-links">
-                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
             </div>
         </div>
     </section>
@@ -466,7 +487,7 @@
                     <button class="timeline-tab active" data-target="education">Education</button>
                     <button class="timeline-tab" data-target="work">Work Experience</button>
                 </div>
-                
+
                 <div class="timeline-content" id="education-timeline">
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
@@ -476,12 +497,14 @@
                             <h4>Middle Tennessee State University</h4>
                             <p>3.6 GPA | Dean's List 4 times</p>
                             <div class="timeline-details">
-                                <p><strong>Key Coursework:</strong> Natural Language Processing, Artificial Intelligence, Data Structures & Algorithms, Computer Graphics, Computer Systems, Software Engineering, Visual Programming, Linear Algebra, Data Analysis</p>
+                                <p><strong>Key Coursework:</strong> Natural Language Processing, Artificial
+                                    Intelligence, Data Structures & Algorithms, Computer Graphics, Computer Systems,
+                                    Software Engineering, Visual Programming, Linear Algebra, Data Analysis</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="timeline-content" id="work-timeline" style="display: none;">
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
@@ -490,32 +513,35 @@
                             <h3>Student Technology Assistant (Team Leader)</h3>
                             <h4>MTSU Walker Library</h4>
                             <div class="timeline-details">
-                                <p>As a Student Technology Assistant (Team Leader), I was responsible for ensuring the smooth operation of computer systems and providing technical support to users.</p>
+                                <p>As a Student Technology Assistant (Team Leader), I was responsible for ensuring the
+                                    smooth operation of computer systems and providing technical support to users.</p>
                                 <ul>
                                     <li>Automated login processes with batch scripts, saving staff time</li>
-                                    <li>Provided technical support and training across various software systems and hardware equipment</li>
+                                    <li>Provided technical support and training across various software systems and
+                                        hardware equipment</li>
                                     <li>Developed and deployed updated training instructions for employees</li>
+                                    <li>and a whole lot more</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="resume-download reveal">
                 <p>For more details, check out my full resumes:</p>
                 <div class="resume-buttons">
                     <a href="Resumes/Software Developer.pdf" class="btn btn-resume" target="_blank">
                         <i class="fas fa-file-pdf"></i> Software Developer
                     </a>
+                    <a href="Resumes/IT Specialist.pdf" class="btn btn-resume" target="_blank">
+                        <i class="fas fa-file-pdf"></i> IT Specialist
+                    </a>
                     <a href="Resumes/Financial Advisor.pdf" class="btn btn-resume" target="_blank">
                         <i class="fas fa-file-pdf"></i> Financial Advisor
                     </a>
                     <a href="Resumes/Entrepreneurial Co-Founder.pdf" class="btn btn-resume" target="_blank">
                         <i class="fas fa-file-pdf"></i> Entrepreneurial Co-Founder
-                    </a>
-                    <a href="Resumes/IT Specialist.pdf" class="btn btn-resume" target="_blank">
-                        <i class="fas fa-file-pdf"></i> IT Specialist
                     </a>
                 </div>
             </div>
@@ -570,7 +596,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container reveal">
+                <!-- Disabled for now -->
+                <!-- <div class="contact-form-container reveal">
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -586,12 +613,14 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-                        </div>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message"
+                                required></textarea>
+                        </div> -->
                         <!-- <button type="submit" class="btn btn-primary">Send Message</button> -->
-                        <button type="submit" class="btn btn-primary">Send Message (this is not implemented yet!)</button>
-                    </form>
-                </div>
+                        <!-- <button type="submit" class="btn btn-primary">Send Message (this is not implemented
+                            yet!)</button> -->
+                    <!-- </form>
+                </div> -->
             </div>
         </div>
     </section>
@@ -601,7 +630,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-text">DrewLickman<span class="accent">.</span>github<span class="accent">.</span>io</span>
+                    <span class="logo-text">DrewLickman<span class="accent">.</span>github<span
+                            class="accent">.</span>io</span>
                 </div>
                 <div class="footer-nav">
                     <a href="#home">Home</a>
