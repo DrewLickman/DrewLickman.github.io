@@ -127,6 +127,7 @@ function initTypingEffect() {
     if (!typingText) return;
     
     const phrases = [
+        'Tech Support 🩹',
         'Python 🐍',
         'JavaScript 💻',
         'C# 🎮',
