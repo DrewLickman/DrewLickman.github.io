@@ -12,14 +12,13 @@ A clean, responsive portfolio website showcasing professional experience, projec
 
 ## Project Structure
 
-```
-
 This README provides a clear overview of your portfolio website, its structure, and how to set it up. It references the key features shown in your HTML files and provides proper documentation for anyone who might want to understand or use your project.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
+- TailwindCSS.exe
 - Vanilla JavaScript
 - Responsive Design
 - CSS Flexbox
@@ -42,15 +41,16 @@ This README provides a clear overview of your portfolio website, its structure, 
 - Professionally styled HTML/CSS resumes
 - Downloadable PDF versions
 - Separate versions for:
-  - Entrepreneurial Founder role
-  - Technology Specialist role
-  - Financial Advisor role
+  - Information Technology Specialist
+  - Software Developer
+  - Financial Advisor
 
 ## Setup
 
 1. Clone the repository
 2. Open `index.html` in your web browser
 3. No additional dependencies or build steps required
+4. (To update Tailwind styling, use `./tailwindcss.exe -i ./css/tailwind.css -o ./css/tailwind.generated.css --minify`)
 
 ## Contact
 

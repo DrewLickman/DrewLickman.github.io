@@ -2,21 +2,22 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/tailwind.generated.css">
+    <link rel="stylesheet" href="../css/fonts.css">
 </head>
 
-<body>
-    <div class="container">
-        <h1>Drew Lickman - Software Developer</h1>
-        <div class="centered">
-            540-322-7186 / Murfreesboro, TN / <a
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto my-8 max-w-[8.5in] min-h-[11in] p-8 shadow-lg rounded bg-white">
+        <h1 class="text-4xl font-bold text-center mb-4">Drew Lickman - Software Developer</h1>
+        <div class="text-center mb-6">
+            540-322-7186 / Murfreesboro, TN / <a class="text-blue-500 hover:underline"
                 href="mailto:contact.drew.business@gmail.com">contact.drew.business@gmail.com</a>
-            <br><a href="https://linkedin.com/in/drew-lickman">linkedin.com/in/drew-lickman</a> / <a
-                href="https://github.com/DrewLickman">github.com/DrewLickman</a>
+            <br><a class="text-blue-500 hover:underline" href="https://linkedin.com/in/drew-lickman">linkedin.com/in/drew-lickman</a> / <a
+                class="text-blue-500 hover:underline" href="https://github.com/DrewLickman">github.com/DrewLickman</a>
         </div>
-        <h2 class="centered">SUMMARY</h2>
-        <div class="callout">
-            <p>
+        <h2 class="text-2xl font-semibold text-center mb-2">SUMMARY</h2>
+        <div class="bg-gray-200 rounded p-6 my-4">
+            <p class="mb-0">
                 Highly motivated software developer with a strong foundation in computer science, proficiency in Python,
                 JavaScript, and C#, and experience in developing scalable software solutions with a focus on clean code
                 and best practices. Strong understanding of data structures, algorithms, and artificial intelligence,
@@ -24,78 +25,88 @@
             </p>
         </div>
 
-        <h2 class="centered">EDUCATION</h2>
-        <div class="edu-title">B.S in Computer Science & Minor in Entrepreneurship @ Middle Tennessee State University
+        <h2 class="text-2xl font-semibold text-center mb-2">EDUCATION</h2>
+        <div class="font-bold">B.S in Computer Science & Minor in Entrepreneurship @ Middle Tennessee State University
         </div>
-        <div class="date">August 2020 - December 2024</div>
-        3.6 GPA | Dean's List 4 times
-        <div><strong>Key Coursework: </strong>Natural Language Processing, Artificial Intelligence,
+        <div class="text-gray-600">August 2020 - December 2024</div>
+        <p class="mb-4">3.6 GPA | Dean's List 4 times</p>
+        <p><strong>Key Coursework: </strong>Natural Language Processing, Artificial Intelligence,
             Data Structures & Algorithms, Computer Graphics, Computer Systems, Software Engineering, Visual
-            Programming, Linear Algebra, Data Analysis</div>
+            Programming, Linear Algebra, Data Analysis</p>
 
-        <h2 class="centered">PROJECTS</h2>
-        <div class="job-title">Financial Data Filtering App</div>
-        <div class="date">Winter 2025</div>
-        <ul>
-            <li>Fetched publicly traded company income statement data via API</li>
-            <li>Implemented frontend data sorting, filtering, and visualization</li>
-            <li>Deployed online with Vercel</li>
-            <li><a
-                    href="https://github.com/DrewLickman/Financial-Data-Filtering-App">github.com/DrewLickman/Financial-Data-Filtering-App</a>
-            </li>
-        </ul>
-
-        <div class="job-title">Natural Language Processing: FOMC Analysis</div>
-        <div class="date">Fall 2024</div>
-        <ul>
-            <li>Created an NLP pipeline for text preprocessing and analysis, enhancing data quality for machine
-                learning models</li>
-            <li>Implemented various text analysis techniques, including summarization, sentiment analysis, and
-                question-answering</li>
-            <li><a
-                    href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines">github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines</a>
-            </li>
-        </ul>
-
-        <div class="job-title">Natural Language Processing: N-Gram Language Model</div>
-        <div class="date">Fall 2024</div>
-        <ul>
-            <li>Developed Shakespearean N-gram text generator using Python and NLTK library</li>
-            <li>Optimized model performance and accuracy with significant quality improvements</li>
-            <li><a
-                    href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator">github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator</a>
-            </li>
-        </ul>
-
-        <div class="job-title">2D Platformer: "Code Runner"</div>
-        <div class="date">Spring 2024</div>
-        <ul>
-            <li>Led 5-person team to create Unity 2d platforming video game, managing project via GitHub and Trello
-            </li>
-            <li>Programmed core mechanics including player movement and enemy AI systems</li>
-            <li><a href="https://github.com/DrewLickman/Code-Runner">github.com/DrewLickman/Code-Runner</a>
-            </li>
-        </ul>
-
-        <h2 class="centered">PROFESSIONAL EXPERIENCE</h2>
-        <div class="job-title">Student Technology Assistant (Team Leader) | MTSU Walker Library</div>
-        <div class="date">Spring 2022 - Winter 2025</div>
-        <ul>
-            <p>As a Student Technology Assistant (Team Leader), I was responsible for ensuring the smooth operation of
-                computer systems and providing technical support to users. I trained employees and patrons on equipment,
-                software, and network connectivity, and oversaw the maintenance of computer equipment. Additionally, I
-                created updated training instructions and detailed documentation for software programs, contributing to
-                a higher quality understanding and retention of procedures.</p>
-            <ul>
-                <li>Automated login processes with batch scripts, saving staff time</li>
-                <li>Provided technical support and training across various software systems and hardware equipment</li>
-                <li>Developed and deployed updated training instructions for employees</li>
+        <h2 class="text-2xl font-semibold text-center mb-2">PROJECTS</h2>
+        <div class="mb-4">
+            <div class="font-bold">Financial Data Filtering App</div>
+            <div class="text-gray-600">Winter 2025</div>
+            <ul class="list-disc list-inside">
+                <li>Fetched publicly traded company income statement data via API</li>
+                <li>Implemented frontend data sorting, filtering, and visualization</li>
+                <li>Deployed online with Vercel</li>
+                <li><a class="text-blue-500 hover:underline"
+                        href="https://github.com/DrewLickman/Financial-Data-Filtering-App">github.com/DrewLickman/Financial-Data-Filtering-App</a>
+                </li>
             </ul>
-        </ul>
+        </div>
 
-        <h2 class="centered">SKILLS</h2>
-        <div class="skills-list">
-            <ul>
+        <div class="mb-4">
+            <div class="font-bold">Natural Language Processing: FOMC Analysis</div>
+            <div class="text-gray-600">Fall 2024</div>
+            <ul class="list-disc list-inside">
+                <li>Created an NLP pipeline for text preprocessing and analysis, enhancing data quality for machine
+                    learning models</li>
+                <li>Implemented various text analysis techniques, including summarization, sentiment analysis, and
+                    question-answering</li>
+                <li><a class="text-blue-500 hover:underline"
+                        href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines">github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mb-4">
+            <div class="font-bold">Natural Language Processing: N-Gram Language Model</div>
+            <div class="text-gray-600">Fall 2024</div>
+            <ul class="list-disc list-inside">
+                <li>Developed Shakespearean N-gram text generator using Python and NLTK library</li>
+                <li>Optimized model performance and accuracy with significant quality improvements</li>
+                <li><a class="text-blue-500 hover:underline"
+                        href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator">github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mb-4">
+            <div class="font-bold">2D Platformer: "Code Runner"</div>
+            <div class="text-gray-600">Spring 2024</div>
+            <ul class="list-disc list-inside">
+                <li>Led 5-person team to create Unity 2d platforming video game, managing project via GitHub and Trello
+                </li>
+                <li>Programmed core mechanics including player movement and enemy AI systems</li>
+                <li><a class="text-blue-500 hover:underline" href="https://github.com/DrewLickman/Code-Runner">github.com/DrewLickman/Code-Runner</a>
+                </li>
+            </ul>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-center mb-2">PROFESSIONAL EXPERIENCE</h2>
+        <div class="mb-4">
+            <div class="font-bold">Student Technology Assistant (Team Leader) | MTSU Walker Library</div>
+            <div class="text-gray-600">Spring 2022 - Winter 2025</div>
+            <ul class="list-disc list-inside">
+                <p>As a Student Technology Assistant (Team Leader), I was responsible for ensuring the smooth operation of
+                    computer systems and providing technical support to users. I trained employees and patrons on equipment,
+                    software, and network connectivity, and oversaw the maintenance of computer equipment. Additionally, I
+                    created updated training instructions and detailed documentation for software programs, contributing to
+                    a higher quality understanding and retention of procedures.</p>
+                <ul class="list-disc list-inside">
+                    <li>Automated login processes with batch scripts, saving staff time</li>
+                    <li>Provided technical support and training across various software systems and hardware equipment</li>
+                    <li>Developed and deployed updated training instructions for employees</li>
+                </ul>
+            </ul>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-center mb-2">SKILLS</h2>
+        <div class="skills-list mb-4">
+            <ul class="list-disc list-inside">
                 <li>
                     <strong>Languages:</strong>
                     Python,

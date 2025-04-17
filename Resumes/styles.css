@@ -43,7 +43,7 @@
     font-size: 16px;
 }
 .callout {
-    background:rgb(222, 222, 222);
+    background: rgb(222, 222, 222); /* reverted to original gray */
     border: 1px solid #aaaaaa;
     margin: 0px;
     padding: 0px 32px;
