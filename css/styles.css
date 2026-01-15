@@ -1047,10 +1047,6 @@ h6 { font-size: 1.2rem; }
     color: var(--muted);
     margin-bottom: 0;
     line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .timeline-full {
