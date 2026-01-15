@@ -127,7 +127,7 @@ function initTypingEffect() {
     if (!typingText) return;
     
     const phrases = [
-        'Tech Support 🩹',
+        'Tech Support 🔨',
         'Python 🐍',
         'JavaScript 💻',
         'C# 🎮',
@@ -136,30 +136,73 @@ function initTypingEffect() {
         'Game Development 🎲'
     ];
     
+    // Split text into grapheme clusters (handles emojis properly)
+    // Using spread operator which respects Unicode grapheme clusters
+    function splitIntoGraphemes(text) {
+        return [...text];
+    }
+    
+    // Check if a character is likely an emoji (simple heuristic)
+    function isEmoji(char) {
+        const code = char.codePointAt(0);
+        return (
+            (code >= 0x1F300 && code <= 0x1F9FF) || // Misc Symbols and Pictographs
+            (code >= 0x2600 && code <= 0x26FF) ||   // Misc symbols
+            (code >= 0x2700 && code <= 0x27BF) ||   // Dingbats
+            (code >= 0x1F600 && code <= 0x1F64F) || // Emoticons
+            (code >= 0x1F680 && code <= 0x1F6FF) || // Transport and Map
+            (code >= 0x1F1E0 && code <= 0x1F1FF) || // Regional indicators
+            (code >= 0x1F900 && code <= 0x1F9FF) || // Supplemental Symbols and Pictographs
+            (code >= 0x1FA00 && code <= 0x1FAFF)    // Symbols and Pictographs Extended-A
+        );
+    }
+    
     let phraseIndex = 0;
-    let charIndex = 0;
+    let graphemeIndex = 0;
     let isDeleting = false;
     let isWaiting = false;
+    let currentGraphemes = [];
     
     const typeEffect = () => {
         const currentPhrase = phrases[phraseIndex];
         
+        // Initialize graphemes if needed
+        if (currentGraphemes.length === 0) {
+            currentGraphemes = splitIntoGraphemes(currentPhrase);
+        }
+        
         if (isDeleting) {
             // Removing characters
-            typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
+            if (graphemeIndex > 0) {
+                graphemeIndex--;
+            }
+            typingText.textContent = currentGraphemes.slice(0, graphemeIndex).join('');
         } else {
             // Adding characters
-            typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
+            if (graphemeIndex < currentGraphemes.length) {
+                const nextChar = currentGraphemes[graphemeIndex];
+                
+                // Add the next grapheme (emoji or character)
+                // Using grapheme-aware splitting ensures emojis are added as complete units
+                graphemeIndex++;
+                typingText.textContent = currentGraphemes.slice(0, graphemeIndex).join('');
+            }
         }
         
         // Blinking cursor
         cursor.style.display = 'inline-block';
         
+        // Use faster speed for emojis to make them appear instantly
         let typeSpeed = isDeleting ? 50 : 100;
+        if (!isDeleting && graphemeIndex > 0 && graphemeIndex <= currentGraphemes.length) {
+            const lastChar = currentGraphemes[graphemeIndex - 1];
+            if (isEmoji(lastChar)) {
+                typeSpeed = 0; // Instant for emojis
+            }
+        }
         
-        if (!isDeleting && charIndex === currentPhrase.length) {
+        // Check if finished typing
+        if (!isDeleting && graphemeIndex >= currentGraphemes.length) {
             // Finished typing current phrase
             isWaiting = true;
             setTimeout(() => {
@@ -168,10 +211,12 @@ function initTypingEffect() {
                 typeEffect();
             }, 1500);
             return;
-        } else if (isDeleting && charIndex === 0) {
+        } else if (isDeleting && graphemeIndex === 0) {
             // Finished deleting current phrase
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
+            graphemeIndex = 0;
+            currentGraphemes = [];
         }
         
         if (!isWaiting) {
