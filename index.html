@@ -7,6 +7,39 @@
     <meta name="description"
         content="Drew Lickman - Software Developer Portfolio - Showcasing projects and skills in AI/ML, NLP, and software development">
     <title>Drew Lickman | Software Developer</title>
+    <link rel="canonical" href="https://drewlickman.github.io/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="Assets/Drew-Profile-Pic.png" type="image/png">
+    <meta property="og:title" content="Drew Lickman | Software Developer">
+    <meta property="og:description"
+        content="Software Developer portfolio featuring web apps, automation, and AI/NLP projects. View projects, experience, and resumes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drewlickman.github.io/">
+    <meta property="og:image" content="https://drewlickman.github.io/Assets/Drew-Profile-Pic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Drew Lickman | Software Developer">
+    <meta name="twitter:description"
+        content="Software Developer portfolio featuring web apps, automation, and AI/NLP projects.">
+    <meta name="twitter:image" content="https://drewlickman.github.io/Assets/Drew-Profile-Pic.png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Drew Lickman",
+            "url": "https://drewlickman.github.io/",
+            "jobTitle": "Software Developer",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Murfreesboro",
+                "addressRegion": "TN",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://linkedin.com/in/drew-lickman",
+                "https://github.com/DrewLickman"
+            ]
+        }
+    </script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -53,19 +86,33 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-image">
-                    <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman" class="profile-image">
+                    <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman" class="profile-image" width="300"
+                        height="300" loading="eager" decoding="async">
                 </div>
                 <div class="hero-text">
                     <h1 class="hero-title">Drew Lickman<span class="accent">.</span></h1>
-                    <div class="hero-subtitle">IT Specialist, <br>Software Dev, <br>AI Enthusiast</div>
+                    <div class="hero-subtitle">IT Specialist focused on tech support, troubleshooting, and automation.</div>
+                    <div class="hero-credibility">
+                        <span class="cred-item"><i class="fas fa-location-dot"></i> Murfreesboro, TN</span>
+                        <span class="cred-item"><i class="fas fa-graduation-cap"></i> B.S. Computer Science (MTSU)</span>
+                        <span class="cred-item"><i class="fas fa-laptop-code"></i> 7+ years coding</span>
+                        <span class="cred-item"><i class="fas fa-code"></i> JavaScript • Python • C#</span>
+                    </div>
                     <div class="typing-container">
                         <span class="typing-prefix">Specializing in...</span>
                         <span class="typing-text" id="typingText"></span>
                         <span class="cursor">|</span>
                     </div>
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a class="btn btn-primary" href="Resumes/IT Specialist.pdf" target="_blank"
+                            rel="noopener noreferrer" data-metric="resume_it_click">
+                            <i class="fas fa-file-pdf"></i> IT Specialist Resume
+                        </a>
+                        <a href="Resumes/Software Developer.pdf" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer" data-metric="resume_software_click">
+                            <i class="fas fa-file-pdf"></i> Software Dev Resume
+                        </a>
+                        <a href="#projects" class="btn btn-secondary" data-metric="hero_view_projects_click">View Projects</a>
                     </div>
                 </div>
             </div>
@@ -82,41 +129,35 @@
             <div class="about-content">
                 <div class="about-image reveal">
                     <div class="about-image-container">
-                        <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman">
+                        <img src="Assets/Drew-Profile-Pic.png" alt="Drew Lickman" width="350" height="350"
+                            loading="lazy" decoding="async">
                         <div class="image-bg"></div>
                     </div>
                 </div>
                 <div class="about-text reveal">
                     <h3>Hello, I'm Drew<span class="accent">.</span></h3>
-                    <p>I'm a software developer with a strong foundation in computer science and a passion for creating
-                        technology solutions that make a positive impact.</p>
-                    <p>My journey into computer science began in high school with Advanced Placement Computer Science
-                        classes.
-                        I was at the top of my class, so I chose to continue my studies at Middle Tennessee State
-                        University, where I honed my skills in Python, JavaScript, C#, and more.
-                        I'm particularly passionate about AI/ML, NLP, and Game Development.</p>
-                    <p>In my day-to-day life, I often find the need to automate or analyze something. I find custom JavaScript
-                        extensions and PowerShell scripts to often be helpful.
-                        I enjoy exploring new technologies and finding ways to apply my skills to solve real-world
-                        problems.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-value">7+</span>
-                            <span class="stat-label">Years of Coding</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">3.6</span>
-                            <span class="stat-label">GPA</span>
-                        </div>
-                    </div>
+                    <p>I’m an IT Specialist who enjoys solving problems for people. I’m at my best when I’m
+                        troubleshooting issues, improving workflows, and helping users get back to work quickly.</p>
+                    <p>I studied Computer Science at Middle Tennessee State University, and I bring a strong technical
+                        foundation into day-to-day support work—understanding how systems fit together, isolating root
+                        causes, and communicating clearly.</p>
+                    <p>Outside of support, I enjoy building small web apps and automation tools (especially with
+                        JavaScript and PowerShell) to remove repetitive work and make processes smoother.</p>
+                    <ul class="about-highlights">
+                        <li><strong>Tech support mindset:</strong> calm, methodical troubleshooting and clear communication</li>
+                        <li><strong>Automation:</strong> scripts and tooling to streamline common tasks</li>
+                        <li><strong>Hands-on learning:</strong> always improving my process and documentation</li>
+                    </ul>
                     <div class="resume-download reveal">
                         <p>For more details, check out my full resumes:</p>
                         <div class="resume-buttons">
-                            <a href="Resumes/IT Specialist.pdf" class="btn btn-resume" target="_blank">
-                                <i class="fas fa-file-pdf"></i> IT Specialist
-                            </a>
-                            <a href="Resumes/Software Developer.pdf" class="btn btn-resume" target="_blank">
+                            <a href="Resumes/Software Developer.pdf" class="btn btn-resume" target="_blank"
+                                rel="noopener noreferrer" data-metric="resume_software_click">
                                 <i class="fas fa-file-pdf"></i> Software Developer
+                            </a>
+                            <a href="Resumes/IT Specialist.pdf" class="btn btn-resume" target="_blank"
+                                rel="noopener noreferrer" data-metric="resume_it_click">
+                                <i class="fas fa-file-pdf"></i> IT Specialist
                             </a>
                         </div>
                     </div>
@@ -367,65 +408,11 @@
                 <button class="filter-btn" data-filter="game">Game Dev</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card reveal" data-category="web">
+                <div class="project-card reveal" data-category="web" data-project-id="financial_data_filtering_app"
+                    role="button" tabindex="0" aria-label="Open details for Financial Data Filtering App">
                     <div class="project-image">
-                        <img src="Assets/projects/Speed-Reader-Thumbnail.png" alt="Speed Reader App">
-                        <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">Vite</span>
-                                <span class="tag">Web</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Speed Reader App</h3>
-                        <p class="project-description">A web app for reading faster with a focused, distraction-free speed-reading experience.</p>
-                        <div class="project-links">
-                            <a href="https://speed-reader-app-magicalmongoose.vercel.app/" target="_blank"
-                                class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/DrewLickman/Speed-Reader-App" target="_blank"
-                                class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal" data-category="web">
-                    <div class="project-image">
-                        <img src="Assets/projects/Random-Generator-Thumbnail.png" alt="Random Generator App">
-                        <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">Web</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Random Generator App</h3>
-                        <p class="project-description">A fun and practical tool for flipping coins, rolling dice,
-                            drawing cards, and spinning wheels.</p>
-                        <div class="project-links">
-                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank"
-                                class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/DrewLickman/Random-Generator-App" target="_blank"
-                                class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal" data-category="web">
-                    <div class="project-image">
-                        <img src="Assets/projects/Financial-Data-Filtering-Thumbnail.png"
-                            alt="Financial Data Filtering App">
+                        <img src="Assets/projects/Financial-Data-Filtering-Thumbnail.png" alt="Financial Data Filtering App"
+                            width="640" height="360" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="tag">JavaScript</span>
@@ -436,24 +423,83 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Financial Data Filtering App</h3>
-                        <p class="project-description">Web application for viewing, sorting, and filtering public stock
-                            income statements with API integration.</p>
+                        <p class="project-description">View, sort, and filter public stock income statements with API integration.</p>
                         <div class="project-links">
                             <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank"
-                                class="project-link">
+                                rel="noopener noreferrer" class="project-link" data-metric="project_demo_click">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank"
-                                class="project-link">
+                                rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card reveal" data-category="web" data-project-id="speed_reader_app" role="button"
+                    tabindex="0" aria-label="Open details for Speed Reader App">
                     <div class="project-image">
-                        <img src="Assets/projects/Pipelines-Thumbnail.png" alt="NLP Pipeline Project">
+                        <img src="Assets/projects/Speed-Reader-Thumbnail.png" alt="Speed Reader App" width="640"
+                            height="360" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Vite</span>
+                                <span class="tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Speed Reader App</h3>
+                        <p class="project-description">A focused, distraction-free speed-reading web app.</p>
+                        <div class="project-links">
+                            <a href="https://speed-reader-app-magicalmongoose.vercel.app/" target="_blank"
+                                rel="noopener noreferrer" class="project-link" data-metric="project_demo_click">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/DrewLickman/Speed-Reader-App" target="_blank"
+                                rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="web" data-project-id="random_generator_app" role="button"
+                    tabindex="0" aria-label="Open details for Random Generator App">
+                    <div class="project-image">
+                        <img src="Assets/projects/Random-Generator-Thumbnail.png" alt="Random Generator App" width="640"
+                            height="360" loading="lazy" decoding="async">
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Random Generator App</h3>
+                        <p class="project-description">Flip coins, roll dice, draw cards, and spin wheels.</p>
+                        <div class="project-links">
+                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank"
+                                rel="noopener noreferrer" class="project-link" data-metric="project_demo_click">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/DrewLickman/Random-Generator-App" target="_blank"
+                                rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="ai-ml" data-project-id="nlp_pipelines" role="button"
+                    tabindex="0" aria-label="Open details for NLP Pipeline Project">
+                    <div class="project-image">
+                        <img src="Assets/projects/Pipelines-Thumbnail.png" alt="NLP Pipeline Project" width="640"
+                            height="360" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="tag">Python</span>
@@ -467,16 +513,18 @@
                         <p class="project-description">Created an NLP pipeline for text preprocessing and analysis.</p>
                         <div class="project-links">
                             <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_7_Pipelines"
-                                target="_blank" class="project-link">
+                                target="_blank" rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card reveal" data-category="ai-ml" data-project-id="ngram_language_model"
+                    role="button" tabindex="0" aria-label="Open details for N-Gram Language Model">
                     <div class="project-image">
-                        <img src="Assets/projects/N-Grams-Thumbnail.png" alt="N-Gram Language Model">
+                        <img src="Assets/projects/N-Grams-Thumbnail.png" alt="N-Gram Language Model" width="640"
+                            height="360" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="tag">Python</span>
@@ -491,16 +539,18 @@
                             library with optimized performance and accuracy.</p>
                         <div class="project-links">
                             <a href="https://github.com/DrewLickman/NLP/tree/main/Projects/Project_2_N-gram_Text_Generator"
-                                target="_blank" class="project-link">
+                                target="_blank" rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="game">
+                <div class="project-card reveal" data-category="game" data-project-id="code_runner" role="button"
+                    tabindex="0" aria-label="Open details for Code Runner">
                     <div class="project-image">
-                        <img src="Assets/projects/Code-Runner-Thumbnail.png" alt="Code Runner Game">
+                        <img src="Assets/projects/Code-Runner-Thumbnail.png" alt="Code Runner Game" width="640"
+                            height="360" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="tag">Unity</span>
@@ -514,7 +564,8 @@
                         <p class="project-description">Led a 5-person team to create a Unity 2D platforming video game,
                             managing the project and programming core mechanics.</p>
                         <div class="project-links">
-                            <a href="https://github.com/DrewLickman/Code-Runner" target="_blank" class="project-link">
+                            <a href="https://github.com/DrewLickman/Code-Runner" target="_blank" class="project-link"
+                                rel="noopener noreferrer" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                         </div>
@@ -537,22 +588,33 @@
             </div>
             <div class="timeline">
                 <div class="timeline-tabs">
-                    <button class="timeline-tab active" data-target="education">Education</button>
-                    <button class="timeline-tab" data-target="work">Work Experience</button>
+                    <div class="timeline-tabs-inner" role="tablist" aria-label="Experience tabs">
+                        <button class="timeline-tab active" data-target="education" role="tab" aria-selected="true">
+                            Education
+                        </button>
+                        <button class="timeline-tab" data-target="work" role="tab" aria-selected="false">
+                            Work Experience
+                        </button>
+                    </div>
                 </div>
 
                 <div class="timeline-content" id="education-timeline">
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2020 - 2024</div>
-                        <div class="timeline-content-box">
+                        <div class="timeline-content-box" role="button" tabindex="0"
+                            aria-label="Open details for B.S. in Computer Science & Minor in Entrepreneurship">
                             <h3>B.S. in Computer Science & Minor in Entrepreneurship</h3>
                             <h4>Middle Tennessee State University</h4>
-                            <p>3.6 GPA | Dean's List 4 times</p>
-                            <div class="timeline-details">
-                                <p><strong>Key Coursework:</strong> Natural Language Processing, Artificial
-                                    Intelligence, Data Structures & Algorithms, Computer Graphics, Computer Systems,
-                                    Software Engineering, Visual Programming, Linear Algebra, Data Analysis</p>
+                            <p class="timeline-summary">B.S. in Computer Science with a minor in Entrepreneurship, with
+                                coursework spanning systems, algorithms, and AI/NLP foundations.</p>
+                            <div class="timeline-full">
+                                <p>3.6 GPA | Dean's List 4 times</p>
+                                <div class="timeline-details">
+                                    <p><strong>Key Coursework:</strong> Natural Language Processing, Artificial
+                                        Intelligence, Data Structures & Algorithms, Computer Graphics, Computer Systems,
+                                        Software Engineering, Visual Programming, Linear Algebra, Data Analysis</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -562,19 +624,24 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2025 - 2025</div>
-                        <div class="timeline-content-box">
+                        <div class="timeline-content-box" role="button" tabindex="0"
+                            aria-label="Open details for Life and Health Insurance Sales Agent">
                             <h3>Life and Health Insurance Sales Agent</h3>
                             <h4>Bankers Life</h4>
-                            <div class="timeline-details">
-                                <p>Seeking to expand my professional horizons and develop entrepreneurial skills, I accepted an invitation to join Bankers Life as a Life and Health Insurance Sales Agent, with a clear pathway toward becoming a Financial Advisor. 
-                                    This role provided me with comprehensive exposure to the insurance industry, financial planning principles, and client relationship management. 
-                                    I gained valuable experience in consultative selling, market analysis, and helping clients make informed decisions about their financial security.</p>
-                                <ul>
-                                    <li>Developed and refined sales techniques through client consultations and product presentations</li>
-                                    <li>Mastered time management skills while balancing prospecting, client meetings, and administrative tasks</li>
-                                    <li>Gained comprehensive knowledge of life insurance, health insurance, and financial planning products</li>
-                                    <li>Built strong client relationships through personalized service and needs-based selling approaches</li>
-                                </ul>
+                            <p class="timeline-summary">Consultative sales role focused on client needs analysis, product
+                                education, and relationship management in financial services.</p>
+                            <div class="timeline-full">
+                                <div class="timeline-details">
+                                    <p>Seeking to expand my professional horizons and develop entrepreneurial skills, I accepted an invitation to join Bankers Life as a Life and Health Insurance Sales Agent, with a clear pathway toward becoming a Financial Advisor. 
+                                        This role provided me with comprehensive exposure to the insurance industry, financial planning principles, and client relationship management. 
+                                        I gained valuable experience in consultative selling, market analysis, and helping clients make informed decisions about their financial security.</p>
+                                    <ul>
+                                        <li>Developed and refined sales techniques through client consultations and product presentations</li>
+                                        <li>Mastered time management skills while balancing prospecting, client meetings, and administrative tasks</li>
+                                        <li>Gained comprehensive knowledge of life insurance, health insurance, and financial planning products</li>
+                                        <li>Built strong client relationships through personalized service and needs-based selling approaches</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -582,19 +649,24 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022 - 2025</div>
-                        <div class="timeline-content-box">
+                        <div class="timeline-content-box" role="button" tabindex="0"
+                            aria-label="Open details for Student Technology Assistant (Team Leader)">
                             <h3>Student Technology Assistant (Team Leader)</h3>
                             <h4>MTSU Walker Library</h4>
-                            <div class="timeline-details">
-                                <p>As a Student Technology Assistant (Team Leader), I managed both the Information Technology department and the Makerspace, ensuring smooth operation of computer systems, 3D printers, laser cutters, and other digital fabrication equipment. I provided comprehensive technical support to students, faculty, and staff while leading a team of student workers.</p>
-                                <ul>
-                                    <li>Led and coordinated a team of student workers across IT and Makerspace operations</li>
-                                    <li>Automated login processes with batch scripts, streamlining staff setup time</li>
-                                    <li>Provided technical support and training for software systems, hardware equipment, and digital fabrication tools</li>
-                                    <li>Managed 3D printers, laser cutters, and other Makerspace equipment maintenance and user training</li>
-                                    <li>Developed and deployed comprehensive training materials for new employees and equipment users</li>
-                                    <li>Troubleshot complex technical issues across multiple platforms and systems</li>
-                                </ul>
+                            <p class="timeline-summary">Led frontline tech support and Makerspace operations—troubleshooting,
+                                user assistance, equipment support, and training for students and staff.</p>
+                            <div class="timeline-full">
+                                <div class="timeline-details">
+                                    <p>As a Student Technology Assistant (Team Leader), I managed both the Information Technology department and the Makerspace, ensuring smooth operation of computer systems, 3D printers, laser cutters, and other digital fabrication equipment. I provided comprehensive technical support to students, faculty, and staff while leading a team of student workers.</p>
+                                    <ul>
+                                        <li>Led and coordinated a team of student workers across IT and Makerspace operations</li>
+                                        <li>Automated login processes with batch scripts, streamlining staff setup time</li>
+                                        <li>Provided technical support and training for software systems, hardware equipment, and digital fabrication tools</li>
+                                        <li>Managed 3D printers, laser cutters, and other Makerspace equipment maintenance and user training</li>
+                                        <li>Developed and deployed comprehensive training materials for new employees and equipment users</li>
+                                        <li>Troubleshot complex technical issues across multiple platforms and systems</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -609,74 +681,103 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
+                <p class="section-subtitle">Open to IT support opportunities — fastest response via email</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info reveal">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Murfreesboro, TN</p>
-                        </div>
+                    <div class="contact-intro">
+                        <h3>Let’s connect</h3>
+                        <p>If you’re hiring for an IT Specialist / IT Support role, I’d love to hear about the team and
+                            the systems you support. For automation or tooling ideas, I’m also happy to chat.</p>
+                        <p class="contact-note">Preferred contact: email. I typically respond within 1–2 business days.</p>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:contact.drew.business@gmail.com">contact.drew.business@gmail.com</a></p>
-                        </div>
+
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="mailto:contact.drew.business@gmail.com" data-metric="email_click">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a class="btn btn-secondary" href="Resumes/IT Specialist.pdf" target="_blank"
+                            rel="noopener noreferrer" data-metric="resume_it_click">
+                            <i class="fas fa-file-pdf"></i> IT Resume
+                        </a>
+                        <a class="btn btn-secondary" href="https://linkedin.com/in/drew-lickman" target="_blank"
+                            rel="noopener noreferrer" data-metric="linkedin_click">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a class="btn btn-secondary" href="https://github.com/DrewLickman" target="_blank"
+                            rel="noopener noreferrer" data-metric="github_click">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>Murfreesboro, TN</p>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>540-322-7186</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <h3>Connect With Me</h3>
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/drew-lickman" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/DrewLickman" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact.drew.business@gmail.com" data-metric="email_click">contact.drew.business@gmail.com</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Disabled for now -->
-                <!-- <div class="contact-form-container reveal">
-                    <form id="contactForm" class="contact-form">
+                <div class="contact-form-container reveal">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <h3 class="contact-form-title">Send a message</h3>
+                        <p class="contact-form-subtitle">This will open your email client with a pre-filled message.</p>
+
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                            <label for="email">Your email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="IT Support opportunity / Question"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Your message"
-                                required></textarea>
-                        </div> -->
-                        <!-- <button type="submit" class="btn btn-primary">Send Message</button> -->
-                        <!-- <button type="submit" class="btn btn-primary">Send Message (this is not implemented
-                            yet!)</button> -->
-                    <!-- </form>
-                </div> -->
+                            <textarea id="message" name="message" rows="6"
+                                placeholder="Share a few details and I'll get back to you." required></textarea>
+                        </div>
+
+                        <div class="contact-form-actions">
+                            <button type="button" class="btn btn-primary" id="contactCopyBtn" data-metric="contact_copy_click">
+                                <i class="fas fa-copy"></i> Copy message
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="contactGmailBtn" data-metric="contact_gmail_click">
+                                <i class="fab fa-google"></i> Gmail
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="contactOutlookBtn" data-metric="contact_outlook_click">
+                                <i class="fas fa-envelope-open-text"></i> Outlook
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="contactMailtoBtn" data-metric="contact_mailto_click">
+                                <i class="fas fa-paper-plane"></i> Mail app
+                            </button>
+                        </div>
+                        <p id="contactFormStatus" class="contact-note" aria-live="polite"></p>
+
+                        <p class="contact-form-fallback">
+                            If your email client doesn't open, email me at
+                            <a href="mailto:contact.drew.business@gmail.com" data-metric="email_click">contact.drew.business@gmail.com</a>.
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -698,13 +799,16 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
-                    <a href="https://linkedin.com/in/drew-lickman" target="_blank" class="social-link">
+                    <a href="https://linkedin.com/in/drew-lickman" target="_blank" class="social-link"
+                        rel="noopener noreferrer" data-metric="linkedin_click" aria-label="LinkedIn profile">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/DrewLickman" target="_blank" class="social-link">
+                    <a href="https://github.com/DrewLickman" target="_blank" class="social-link"
+                        rel="noopener noreferrer" data-metric="github_click" aria-label="GitHub profile">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:contact.drew.business@gmail.com" class="social-link">
+                    <a href="mailto:contact.drew.business@gmail.com" class="social-link" data-metric="email_click"
+                        aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -718,7 +822,17 @@
     <!-- Project Modal -->
     <div class="modal" id="projectModal">
         <div class="modal-content">
-            <span class="modal-close">&times;</span>
+            <button type="button" class="modal-close" aria-label="Close project details">&times;</button>
+            <div class="modal-body">
+                <!-- Content will be dynamically injected -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Modal -->
+    <div class="modal" id="timelineModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" aria-label="Close experience details">&times;</button>
             <div class="modal-body">
                 <!-- Content will be dynamically injected -->
             </div>
