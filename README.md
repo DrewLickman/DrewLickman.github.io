@@ -1,63 +1,76 @@
-# [Drew Lickman's Portfolio Website](https://drewlickman.github.io)
+# Drew Lickman — Portfolio Website
 
-A clean, responsive portfolio website showcasing professional experience, projects, and contact information.
+Live site: `https://drewlickman.github.io/`
+
+A responsive, single-page portfolio site focused on **IT Specialist / tech support**—with projects, experience, and a recruiter-friendly contact flow.
 
 ## Features
 
-- Responsive design optimized for all device sizes
-- Interactive project carousel
-- Downloadable resumes for different career paths
-- Social media and contact links
-- Professional styling with smooth transitions and animations
+- **Responsive single-page layout** (anchor nav + smooth scrolling)
+- **Light/Dark mode toggle**
+- **Projects**
+  - Category filters
+  - Clickable project cards with a **details modal** (problem/solution/impact/stack/links)
+- **Experience & Education**
+  - Compact 2–3 line summaries
+  - Click to open a **details modal** with the full entry text
+- **Contact**
+  - Quick-action buttons (Email / IT Resume / LinkedIn / GitHub)
+  - Message form with **Copy / Gmail / Outlook / Mail app** actions (works even without a configured desktop mail client)
+- **Lightweight click metrics** (privacy-friendly, stored locally in `localStorage`)
+  - View totals in DevTools via `window.DL_metrics()`
 
-## Project Structure
+## Tech stack
 
-This README provides a clear overview of your portfolio website, its structure, and how to set it up. It references the key features shown in your HTML files and provides proper documentation for anyone who might want to understand or use your project.
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- TailwindCSS.exe
+- HTML + CSS (custom styling + generated Tailwind utilities)
 - Vanilla JavaScript
-- Responsive Design
-- CSS Flexbox
+- TailwindCSS (builds to `css/tailwind.generated.css`)
 
-## Key Components
+## Repo layout
 
-### Homepage
-- Professional introduction
-- Resume download options
-- Interactive project carousel featuring:
-  - NLP Pipeline Project
-  - NLP Text Generator
-  - Code Runner Game
-- Deployed apps featuring:
-  - Financial Data Filtering App
-  - Random Generator App
-- Social media and contact links
+- `index.html`: page content/structure
+- `css/styles.css`: main styles
+- `css/tailwind.css` / `css/tailwind.generated.css`: Tailwind input/output
+- `js/main.js`: interactive behavior (theme toggle, filters, modals, contact actions, click metrics)
+- `Assets/`: images and thumbnails
+- `Resumes/`: PDF + HTML resume versions
 
-### Resume Pages
-- Professionally styled HTML/CSS resumes
-- Downloadable PDF versions
-- Separate versions for:
-  - Information Technology Specialist
-  - Software Developer
-  - Financial Advisor
+## Local development
 
-## Setup
+You can open `index.html` directly in a browser.
 
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. No additional dependencies or build steps required
-4. (To update Tailwind styling, use `./tailwindcss.exe -i ./css/tailwind.css -o ./css/tailwind.generated.css --minify`)
+If you want to rebuild Tailwind output:
+
+```bash
+npm install
+npm run build:tailwind
+```
+
+## Updating click metrics
+
+- Metrics are stored in the browser (no network requests).
+- In DevTools Console, run:
+
+```js
+window.DL_metrics()
+```
+
+To reset:
+
+```js
+localStorage.removeItem('dl_site_metrics_v1')
+```
+
+## Deployment
+
+This repo is intended for GitHub Pages. Pushing to `main` updates `origin/main`, and GitHub Pages serves the site at `https://drewlickman.github.io/`.
 
 ## Contact
 
-- Email: contact.drew.business@gmail.com
-- LinkedIn: [Drew Lickman](https://linkedin.com/in/drew-lickman)
-- GitHub: [DrewLickman](https://github.com/DrewLickman)
+- Email: `contact.drew.business@gmail.com`
+- LinkedIn: `https://linkedin.com/in/drew-lickman`
+- GitHub: `https://github.com/DrewLickman`
 
 ## License
 
-This project is open source and available under the MIT License.
+No license file is currently included in this repository. If you want an explicit license (MIT/ISC/etc.), add a `LICENSE` file and update this section.
