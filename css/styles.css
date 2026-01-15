@@ -1254,8 +1254,8 @@ h6 { font-size: 1.2rem; }
 }
 
 .contact-form-actions {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
     margin-top: 0.25rem;
 }
@@ -1265,6 +1265,7 @@ h6 { font-size: 1.2rem; }
     align-items: center;
     gap: 0.6rem;
     padding: 0.65rem 1.25rem;
+    justify-content: center;
 }
 
 .contact-form-actions .btn.btn-secondary {
@@ -1762,6 +1763,10 @@ h6 { font-size: 1.2rem; }
     }
 
     .contact-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-actions {
         grid-template-columns: 1fr;
     }
     
