@@ -4,6 +4,14 @@
 <head>
     <link rel="stylesheet" href="../css/tailwind.generated.css">
     <link rel="stylesheet" href="../css/fonts.css">
+    <style>
+        @media print {
+            .page-break-before {
+                page-break-before: always;
+                break-before: page;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -62,7 +70,7 @@
             <li>Created and maintained user guides so staff could independently operate equipment</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold text-center mb-2">PROFESSIONAL EXPERIENCE</h2>
+        <h2 class="text-2xl font-semibold text-center mb-2 page-break-before">PROFESSIONAL EXPERIENCE</h2>
         <div class="font-bold">Student Technology Assistant (Team Leader) | MTSU Walker Library</div>
         <div class="text-gray-600">Spring 2022 - Winter 2025</div>
         <p class="mb-2">Provided comprehensive IT support for university library technology systems, delivering technical assistance to end users while maintaining system functionality and security.</p>
