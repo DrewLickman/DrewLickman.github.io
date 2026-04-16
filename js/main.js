@@ -843,6 +843,24 @@ function initProjectModals() {
             links: {
                 code: 'https://github.com/DrewLickman/Code-Runner'
             }
+        },
+        magical_minigames: {
+            title: 'Magical Minigames',
+            subtitle: 'A web minigame suite for group party play.',
+            problem:
+                'For group events, it is useful to have quick, browser-based party games that are easy to launch and play together.',
+            solution:
+                'Built a lightweight Next.js web app with small multiplayer-style minigames like Codenames and Imposter for me and my friends.',
+            impact: [
+                'Provides a practical party-ready game hub that runs in the browser.',
+                'Shows end-to-end delivery from concept to hosted demo with continuous iteration.'
+            ],
+            stack: ['Next.js', 'HTML', 'CSS', 'Game Dev'],
+            role: 'Solo developer',
+            links: {
+                demo: 'https://magical-minigames.vercel.app/',
+                code: 'https://github.com/DrewLickman/Magical-Minigames'
+            }
         }
     };
 
