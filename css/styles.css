@@ -755,10 +755,16 @@ h6 { font-size: 1.2rem; }
 
 /* Projects Section */
 .projects-filter {
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.projects-filter-row {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -1780,13 +1786,18 @@ h6 { font-size: 1.2rem; }
     }
     
     .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         max-width: 100%;
-        gap: 1.5rem; /* Adjusted gap for mobile */
+        gap: 0.75rem;
     }
 
     .skill-card {
-        flex: 1 1 160px;
-        max-width: 240px;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        margin: 0;
+        padding: 1.25rem 1rem;
     }
     
     .projects-grid {
@@ -1817,7 +1828,7 @@ h6 { font-size: 1.2rem; }
     .timeline-content-box {
         width: 100%;
         margin-left: 0;
-        margin-top: 70px;
+        margin-top: 0.5rem;
     }
     
     .contact-container {
