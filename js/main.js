@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectModals();
 });
 
+function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 // Lightweight click analytics (privacy-friendly, no network requests)
 // Stores counts in localStorage and logs to console for manual review.
 function initAnalytics() {
@@ -84,6 +88,9 @@ function initNavbar() {
     navToggle.addEventListener('click', () => {
         navToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
     
     // Close mobile menu when clicking a link
@@ -91,6 +98,8 @@ function initNavbar() {
         link.addEventListener('click', () => {
             navToggle.classList.remove('active');
             navLinks.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open navigation menu');
         });
     });
     
@@ -149,6 +158,10 @@ function initThemeToggle() {
 // Scroll reveal animations
 function initScrollReveal() {
     const revealElements = document.querySelectorAll('.reveal');
+    if (prefersReducedMotion()) {
+        revealElements.forEach((element) => element.classList.add('active'));
+        return;
+    }
     
     const revealHandler = () => {
         const windowHeight = window.innerHeight;
@@ -176,6 +189,11 @@ function initTypingEffect() {
     const cursor = document.querySelector('.cursor');
     
     if (!typingText) return;
+    if (prefersReducedMotion()) {
+        typingText.textContent = 'Tech Support';
+        if (cursor) cursor.style.display = 'none';
+        return;
+    }
     
     const phrases = [
         'Tech Support',
@@ -284,6 +302,11 @@ function initParticles() {
     const particlesContainer = document.getElementById('particles');
     
     if (!particlesContainer) return;
+    if (prefersReducedMotion()) {
+        particlesContainer.setAttribute('aria-hidden', 'true');
+        particlesContainer.style.display = 'none';
+        return;
+    }
     
     // Configuration for the particles
     const particlesConfig = {
@@ -457,22 +480,13 @@ function initProjectFilter() {
             // Get the filter value
             const filterValue = btn.getAttribute('data-filter');
             
-            // Filter projects
+            // Filter projects instantly (no delayed animation)
             projectCards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.8)';
-                
-                setTimeout(() => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }, 300);
+                const shouldShow = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+                card.style.display = shouldShow ? 'block' : 'none';
+                card.style.opacity = '';
+                card.style.transform = '';
+                card.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
             });
         });
     });
@@ -484,6 +498,11 @@ function initTimeline() {
     const timelineContents = document.querySelectorAll('.timeline-content');
     
     if (timelineTabs.length === 0 || timelineContents.length === 0) return;
+
+    timelineContents.forEach((content) => {
+        const isVisible = content.style.display !== 'none';
+        content.setAttribute('aria-hidden', String(!isVisible));
+    });
     
     timelineTabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -503,10 +522,13 @@ function initTimeline() {
             // Hide all contents
             timelineContents.forEach(content => {
                 content.style.display = 'none';
+                content.setAttribute('aria-hidden', 'true');
             });
             
             // Show the target content
-            document.getElementById(`${targetId}-timeline`).style.display = 'block';
+            const targetContent = document.getElementById(`${targetId}-timeline`);
+            targetContent.style.display = 'block';
+            targetContent.setAttribute('aria-hidden', 'false');
         });
     });
 }
@@ -519,8 +541,43 @@ function initTimelineModals() {
 
     const modalContent = modal.querySelector('.modal-body');
     const modalClose = modal.querySelector('.modal-close');
+    let lastFocusedElement = null;
 
-    const closeModal = () => modal.classList.remove('active');
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-hidden', 'true');
+
+    function getFocusableElements() {
+        return Array.from(
+            modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+        ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null);
+    }
+
+    function onModalKeydown(e) {
+        if (e.key !== 'Tab' || !modal.classList.contains('active')) return;
+        const focusable = getFocusableElements();
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        modal.removeEventListener('keydown', onModalKeydown);
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
+    };
 
     modalClose?.addEventListener('click', closeModal);
 
@@ -533,6 +590,7 @@ function initTimelineModals() {
     });
 
     function openTimelineModal(box) {
+        lastFocusedElement = document.activeElement;
         const item = box.closest('.timeline-item');
         const date = item?.querySelector('.timeline-date')?.textContent?.trim() || '';
 
@@ -551,6 +609,9 @@ function initTimelineModals() {
         `;
 
         modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        modal.addEventListener('keydown', onModalKeydown);
+        modalClose?.focus();
     }
 
     timelineBoxes.forEach((box) => {
@@ -586,7 +647,7 @@ function initBackToTop() {
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth'
         });
     });
 }
@@ -717,23 +778,58 @@ function initProjectModals() {
     
     const modalContent = modal.querySelector('.modal-body');
     const modalClose = modal.querySelector('.modal-close');
+    let lastFocusedElement = null;
+
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-hidden', 'true');
+
+    function getFocusableElements() {
+        return Array.from(
+            modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+        ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null);
+    }
+
+    function onModalKeydown(e) {
+        if (e.key !== 'Tab' || !modal.classList.contains('active')) return;
+        const focusable = getFocusableElements();
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        modal.removeEventListener('keydown', onModalKeydown);
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+            lastFocusedElement = null;
+        }
+    };
     
     // Close modal when clicking the close button
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
+    modalClose.addEventListener('click', closeModal);
 
     // Close modal on Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
+            closeModal();
         }
     });
     
     // Close modal when clicking outside the content
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.classList.remove('active');
+            closeModal();
         }
     });
     
@@ -773,24 +869,6 @@ function initProjectModals() {
             links: {
                 demo: 'https://random-generator-app-magicalmongoose.vercel.app/',
                 code: 'https://github.com/DrewLickman/Random-Generator-App'
-            }
-        },
-        financial_data_filtering_app: {
-            title: 'Financial Data Filtering App',
-            subtitle: 'View, sort, and filter stock income statements.',
-            problem:
-                'Raw financial datasets are hard to explore without fast filtering, sorting, and clean presentation.',
-            solution:
-                'Built a React web app that pulls public financial data and provides UI controls to sort and filter statements.',
-            impact: [
-                'Demonstrates API integration + real-world data handling.',
-                'Focus on usability: filtering/sorting to answer questions quickly.'
-            ],
-            stack: ['JavaScript', 'React', 'API'],
-            role: 'Solo developer',
-            links: {
-                demo: 'https://financial-data-filtering-app-magicalmongoose.vercel.app/',
-                code: 'https://github.com/DrewLickman/Financial-Data-Filtering-App'
             }
         },
         nlp_pipelines: {
@@ -934,7 +1012,11 @@ function initProjectModals() {
         });
 
         renderProjectModal({ ...project, title }, image, tags, links);
+        lastFocusedElement = document.activeElement;
         modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        modal.addEventListener('keydown', onModalKeydown);
+        modalClose.focus();
     }
 
     // Open modal when clicking a project card

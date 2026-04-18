@@ -59,12 +59,13 @@
                 <span class="logo-text">DrewLickman<span class="accent">.</span>github<span
                         class="accent">.</span>io</span>
             </div>
-            <div class="nav-toggle" id="navToggle">
+            <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav"
+                aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-links">
+            </button>
+            <ul class="nav-links" id="primaryNav">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -91,12 +92,12 @@
                 </div>
                 <div class="hero-text">
                     <h1 class="hero-title">Drew Lickman<span class="accent">.</span></h1>
-                    <div class="hero-subtitle">IT Specialist focused on tech support, troubleshooting, and automation.</div>
-                    <div class="hero-credibility">
-                        <span class="cred-item"><i class="fas fa-location-dot"></i> Murfreesboro, TN</span>
-                        <span class="cred-item"><i class="fas fa-graduation-cap"></i> B.S. Computer Science (MTSU)</span>
-                        <span class="cred-item"><i class="fas fa-laptop-code"></i> 7+ years coding</span>
-                        <span class="cred-item"><i class="fas fa-code"></i> JavaScript • Python • C#</span>
+                    <div class="hero-subtitle">IT Technician focused on reliable device deployment, software support, and
+                        process improvement.</div>
+                    <div class="hero-proof" aria-label="Proof points">
+                        <span class="proof-item"><strong>3+ years</strong> frontline tech support</span>
+                        <span class="proof-item"><strong>7+ years</strong> coding and automation</span>
+                        <span class="proof-item"><strong>4x</strong> Dean's List at MTSU</span>
                     </div>
                     <div class="typing-container">
                         <span class="typing-prefix">Specializing in...</span>
@@ -107,10 +108,6 @@
                         <a class="btn btn-primary" href="Resumes/IT Specialist.pdf" target="_blank"
                             rel="noopener noreferrer" data-metric="resume_it_click">
                             <i class="fas fa-file-pdf"></i> IT Specialist Resume
-                        </a>
-                        <a href="Resumes/Software Developer.pdf" class="btn btn-primary" target="_blank"
-                            rel="noopener noreferrer" data-metric="resume_software_click">
-                            <i class="fas fa-file-pdf"></i> Software Dev Resume
                         </a>
                         <a href="#projects" class="btn btn-secondary" data-metric="hero_view_projects_click">View Projects</a>
                     </div>
@@ -399,28 +396,28 @@
                 <button class="filter-btn" data-filter="game">Game Dev</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card reveal" data-category="web" data-project-id="financial_data_filtering_app"
-                    role="button" tabindex="0" aria-label="Open details for Financial Data Filtering App">
+                <div class="project-card reveal" data-category="web" data-project-id="random_generator_app" role="button"
+                    tabindex="0" aria-label="Open details for Random Generator App">
                     <div class="project-image">
-                        <img src="Assets/projects/Financial-Data-Filtering-Thumbnail.png" alt="Financial Data Filtering App"
-                            width="640" height="360" loading="lazy" decoding="async">
+                        <img src="Assets/projects/Random-Generator-Thumbnail.png" alt="Random Generator App" width="640"
+                            height="360" loading="lazy" decoding="async">
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="tag">JavaScript</span>
-                                <span class="tag">React</span>
-                                <span class="tag">API</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">Web</span>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">Financial Data Filtering App</h3>
-                        <p class="project-description">View, sort, and filter public stock income statements with API integration.</p>
+                        <h3 class="project-title">Random Generator App</h3>
+                        <p class="project-description">Flip coins, roll dice, draw cards, and spin wheels.</p>
                         <div class="project-links">
-                            <a href="https://financial-data-filtering-app-magicalmongoose.vercel.app/" target="_blank"
+                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank"
                                 rel="noopener noreferrer" class="project-link" data-metric="project_demo_click">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
-                            <a href="https://github.com/DrewLickman/Financial-Data-Filtering-App" target="_blank"
+                            <a href="https://github.com/DrewLickman/Random-Generator-App" target="_blank"
                                 rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
@@ -450,35 +447,6 @@
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                             <a href="https://github.com/DrewLickman/Speed-Reader-App" target="_blank"
-                                rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal" data-category="web" data-project-id="random_generator_app" role="button"
-                    tabindex="0" aria-label="Open details for Random Generator App">
-                    <div class="project-image">
-                        <img src="Assets/projects/Random-Generator-Thumbnail.png" alt="Random Generator App" width="640"
-                            height="360" loading="lazy" decoding="async">
-                        <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">HTML/CSS</span>
-                                <span class="tag">Web</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Random Generator App</h3>
-                        <p class="project-description">Flip coins, roll dice, draw cards, and spin wheels.</p>
-                        <div class="project-links">
-                            <a href="https://random-generator-app-magicalmongoose.vercel.app/" target="_blank"
-                                rel="noopener noreferrer" class="project-link" data-metric="project_demo_click">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                            <a href="https://github.com/DrewLickman/Random-Generator-App" target="_blank"
                                 rel="noopener noreferrer" class="project-link" data-metric="project_code_click">
                                 <i class="fab fa-github"></i> View Code
                             </a>
@@ -626,7 +594,7 @@
                         <div class="timeline-date">2020 - 2024</div>
                         <div class="timeline-content-box" role="button" tabindex="0"
                             aria-label="Open details for B.S. in Computer Science & Minor in Entrepreneurship">
-                            <h3>B.S. in Computer Science<h3>
+                            <h3>B.S. in Computer Science</h3>
                             <h3>& Minor in Entrepreneurship</h3>
                             <h4>Middle Tennessee State University</h4>
                             <p class="timeline-summary">Built strong foundations in computer systems, data structures &amp;
@@ -645,6 +613,34 @@
                 </div>
 
                 <div class="timeline-content" id="work-timeline" style="display: none;">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2026 - Present</div>
+                        <div class="timeline-content-box" role="button" tabindex="0"
+                            aria-label="Open details for IT Technician Contractor at Deloitte">
+                            <h3>IT Technician Contractor</h3>
+                            <h4>Deloitte</h4>
+                            <p class="timeline-summary">Prepare and deploy employee laptops at scale through shipment intake,
+                                imaging, pre-provisioning, software installation, and quality assurance.</p>
+                            <div class="timeline-full">
+                                <div class="timeline-details">
+                                    <p>In this role, I support large-scale laptop deployment and upgrade workflows. I import
+                                        laptop shipments, unbox and image devices, pre-provision them for new hires, then
+                                        repackage and export them to Deloitte employees. I also install software and complete
+                                        upgrade support for current employees, with a strong focus on quality assurance,
+                                        process adherence, and continuous process improvement.</p>
+                                    <ul>
+                                        <li>Imported laptop shipments and managed intake-to-export hardware workflow</li>
+                                        <li>Imaged and pre-provisioned laptops for new Deloitte employees</li>
+                                        <li>Installed and updated software on employee laptops during upgrade cycles</li>
+                                        <li>Performed quality assurance checks to ensure deployment readiness</li>
+                                        <li>Followed documented processes closely while identifying opportunities to improve them</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="timeline-item reveal">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2025 - 2025</div>
