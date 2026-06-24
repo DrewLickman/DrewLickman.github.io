@@ -853,6 +853,24 @@ function initProjectModals() {
                 code: 'https://github.com/DrewLickman/Speed-Reader-App'
             }
         },
+        mtg_deck_analyzer: {
+            title: 'MTG Deck Analyzer',
+            subtitle: 'Commander deck analysis powered by Scryfall data.',
+            problem:
+                'Evaluating a Commander deck by hand is slow—mana curves, role coverage, and synergy are hard to assess at a glance.',
+            solution:
+                'Built a Next.js web app that imports Moxfield decklists and analyzes mana curves, color pips, card roles, synergy clusters, and upgrade suggestions using Scryfall.',
+            impact: [
+                'Shipped a live demo for instant deck review via Moxfield URL.',
+                'Surfaces actionable insights like ramp/draw gaps and strategy groupings.'
+            ],
+            stack: ['Next.js', 'React', 'Web'],
+            role: 'Solo developer',
+            links: {
+                demo: 'https://mtg-deck-analyzer-magicalmongoose.vercel.app/',
+                code: 'https://github.com/DrewLickman/MTG-Deck-Analyzer'
+            }
+        },
         random_generator_app: {
             title: 'Random Generator App',
             subtitle: 'Coins, dice, cards, and wheels in one tool.',
