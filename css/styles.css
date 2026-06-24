@@ -807,6 +807,7 @@ h6 { font-size: 1.2rem; }
     transition: all var(--transition-normal);
     border: 1px solid var(--border-color);
     position: relative;
+    cursor: pointer;
 }
 
 .project-card::before {
@@ -843,6 +844,7 @@ h6 { font-size: 1.2rem; }
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-normal);
+    pointer-events: none;
 }
 
 .project-card:hover .project-image img {
