@@ -36,6 +36,23 @@ window.PROJECTS = {
             code: 'https://github.com/DrewLickman/MTG-Deck-Analyzer'
         }
     },
+    bitcoin_trader: {
+        title: 'Bitcoin Trader',
+        subtitle: 'Real-time decision support for Kalshi BTC markets.',
+        problem:
+            'Short-duration Bitcoin prediction markets move quickly, making it difficult to combine market prices, momentum indicators, and risk checks consistently.',
+        solution:
+            'Built a FastAPI and React dashboard that monitors Kalshi and Coinbase data, calculates technical indicators and confidence scores, and supports configurable paper-trading and manual-signal workflows.',
+        impact: [
+            'Consolidates live market data, technical indicators, confidence scores, and trade history in one dashboard.',
+            'Supports safer strategy iteration with paper trading, manual signal review, and configurable thresholds.'
+        ],
+        stack: ['Python', 'FastAPI', 'React', 'TypeScript'],
+        role: 'Solo developer',
+        links: {
+            code: 'https://github.com/DrewLickman/Bitcoin-Trader'
+        }
+    },
     random_generator_app: {
         title: 'Random Generator App',
         subtitle: 'Coins, dice, cards, and wheels in one tool.',
