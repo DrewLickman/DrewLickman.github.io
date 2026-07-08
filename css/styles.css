@@ -927,41 +927,8 @@ h6 { font-size: 1.2rem; }
 /* Experience Section */
 .timeline {
     position: relative;
-    max-width: 1050px; /* Wider layout for education/work tiles */
+    max-width: 1050px;
     margin: 0 auto;
-}
-
-.timeline-tabs {
-    justify-content: center;
-    display: flex;
-    margin-bottom: 3rem;
-}
-
-.timeline-tabs-inner {
-    display: inline-flex;
-    gap: 0.75rem;
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 999px;
-    background: rgba(var(--text-color-rgb), 0.03);
-}
-
-.timeline-tab {
-    padding: 0.7rem 2rem;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all var(--transition-normal);
-    color: var(--text-color);
-    box-shadow: var(--shadow-sm);
-}
-
-.timeline-tab.active, .timeline-tab:hover {
-    background-color: var(--primary);
-    color: white;
-    border-color: transparent;
 }
 
 .timeline-content {
@@ -1052,6 +1019,33 @@ h6 { font-size: 1.2rem; }
 .timeline-content-box h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+}
+
+.timeline-type {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.65rem;
+    margin-bottom: 0.85rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.timeline-type-work {
+    color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.12);
+}
+
+.timeline-type-education {
+    color: #a86000;
+    background: rgba(243, 156, 18, 0.16);
+}
+
+.dark-mode .timeline-type-education {
+    color: #ffc35c;
 }
 
 .timeline-content-box h4 {
@@ -1564,7 +1558,6 @@ h6 { font-size: 1.2rem; }
 .project-link:focus-visible,
 .social-link:focus-visible,
 .filter-btn:focus-visible,
-.timeline-tab:focus-visible,
 .theme-toggle:focus-visible {
     outline: 3px solid rgba(var(--primary-rgb), 0.6);
     outline-offset: 3px;
@@ -1906,10 +1899,6 @@ h6 { font-size: 1.2rem; }
     .about-image-container {
         width: 250px;
         height: 250px;
-    }
-    
-    .timeline-tabs-inner {
-        gap: 0.5rem;
     }
 }
 

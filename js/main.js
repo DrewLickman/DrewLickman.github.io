@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypingEffect();
     initParticles();
     initProjectFilter();
-    initTimeline();
     initTimelineModals();
     initBackToTop();
     initContactForm();
@@ -492,47 +491,6 @@ function initProjectFilter() {
     });
 }
 
-// Timeline tabs functionality
-function initTimeline() {
-    const timelineTabs = document.querySelectorAll('.timeline-tab');
-    const timelineContents = document.querySelectorAll('.timeline-content');
-    
-    if (timelineTabs.length === 0 || timelineContents.length === 0) return;
-
-    timelineContents.forEach((content) => {
-        const isVisible = content.style.display !== 'none';
-        content.setAttribute('aria-hidden', String(!isVisible));
-    });
-    
-    timelineTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            timelineTabs.forEach(tab => {
-                tab.classList.remove('active');
-                tab.setAttribute('aria-selected', 'false');
-            });
-            
-            // Add active class to clicked tab
-            tab.classList.add('active');
-            tab.setAttribute('aria-selected', 'true');
-            
-            // Get the target content
-            const targetId = tab.getAttribute('data-target');
-            
-            // Hide all contents
-            timelineContents.forEach(content => {
-                content.style.display = 'none';
-                content.setAttribute('aria-hidden', 'true');
-            });
-            
-            // Show the target content
-            const targetContent = document.getElementById(`${targetId}-timeline`);
-            targetContent.style.display = 'block';
-            targetContent.setAttribute('aria-hidden', 'false');
-        });
-    });
-}
-
 // Timeline item modal functionality (similar to project modals)
 function initTimelineModals() {
     const timelineBoxes = document.querySelectorAll('.timeline-content-box[role="button"]');
@@ -950,4 +908,4 @@ function initProjectModals() {
         e.preventDefault();
         openProjectModal(card);
     });
-} 
+}
