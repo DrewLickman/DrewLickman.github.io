@@ -1,1 +1,5 @@
 tailwindcss.exe
+.job-search/
+node_modules/
+tmp/
+job-application-assistant/
