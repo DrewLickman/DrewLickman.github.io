@@ -1,5 +1,39 @@
 // Project case-study data for portfolio modals
 window.PROJECTS = {
+    career_hq: {
+        title: 'Career HQ',
+        subtitle: 'A private, local job-search operating system for Codex.',
+        problem:
+            'Job searching mixes sensitive personal data, repeated research, document preparation, and decisions that need a clear audit trail.',
+        solution:
+            'Built a local workflow that combines Codex guidance with deterministic scripts for evidence, privacy, approval, and application tracking.',
+        impact: [
+            'Keeps applicant data in an ignored local workspace instead of the public repository.',
+            'Separates preparation from submission and requires confirmation evidence before an application is recorded as submitted.'
+        ],
+        stack: ['AI Automation', 'Python', 'Next.js'],
+        role: 'Solo developer',
+        links: {
+            code: 'https://github.com/DrewLickman/Career-HQ'
+        }
+    },
+    music_metadata_macro: {
+        title: 'Music Metadata Macro',
+        subtitle: 'A PowerShell utility for bulk audio-file cleanup.',
+        problem:
+            'Downloaded music often arrives with inconsistent filenames and incomplete metadata, and bulk edits can create difficult-to-reverse mistakes.',
+        solution:
+            'Built a WinForms PowerShell utility that previews filename and tag changes, supports manual edits, detects collisions, and keeps undo history for applied batches.',
+        impact: [
+            'Uses dry-run previews before a batch changes local files.',
+            'Reports filename and metadata failures separately so a failed tag update does not repeat a completed rename.'
+        ],
+        stack: ['PowerShell', 'WinForms', 'Automation'],
+        role: 'Solo developer',
+        links: {
+            code: 'https://github.com/DrewLickman/Music-Metadata-Macro'
+        }
+    },
     speed_reader_app: {
         title: 'Speed Reader App',
         subtitle: 'Distraction-free speed reading in the browser.',
@@ -29,7 +63,7 @@ window.PROJECTS = {
             'Shipped a live demo for instant deck review via Moxfield URL.',
             'Surfaces actionable insights like ramp/draw gaps and strategy groupings.'
         ],
-        stack: ['Next.js', 'React', 'Web'],
+        stack: ['Next.js', 'React', 'Interactive', 'Web'],
         role: 'Solo developer',
         links: {
             demo: 'https://mtg-deck-analyzer-magicalmongoose.vercel.app/',
@@ -38,7 +72,7 @@ window.PROJECTS = {
     },
     bitcoin_trader: {
         title: 'Bitcoin Trader',
-        subtitle: 'Real-time decision support for Kalshi BTC markets.',
+        subtitle: 'Private real-time decision support for Kalshi BTC markets.',
         problem:
             'Short-duration Bitcoin prediction markets move quickly, making it difficult to combine market prices, momentum indicators, and risk checks consistently.',
         solution:
@@ -47,11 +81,9 @@ window.PROJECTS = {
             'Consolidates live market data, technical indicators, confidence scores, and trade history in one dashboard.',
             'Supports safer strategy iteration with paper trading, manual signal review, and configurable thresholds.'
         ],
-        stack: ['Python', 'FastAPI', 'React', 'TypeScript'],
+        stack: ['Python', 'FastAPI', 'React', 'TypeScript', 'Private Project'],
         role: 'Solo developer',
-        links: {
-            code: 'https://github.com/DrewLickman/Bitcoin-Trader'
-        }
+        links: {}
     },
     random_generator_app: {
         title: 'Random Generator App',
@@ -128,12 +160,12 @@ window.PROJECTS = {
         problem:
             'For group events, it is useful to have quick, browser-based party games that are easy to launch and play together.',
         solution:
-            'Built a lightweight Next.js web app with small multiplayer-style minigames like Codenames and Imposter for me and my friends.',
+            'Built a lightweight Next.js web app with party-style games including Codenames, Spyfall, and Jeopardy.',
         impact: [
             'Provides a practical party-ready game hub that runs in the browser.',
             'Shows end-to-end delivery from concept to hosted demo with continuous iteration.'
         ],
-        stack: ['Next.js', 'HTML', 'CSS', 'Game Dev'],
+        stack: ['Next.js', 'HTML', 'CSS', 'Interactive Entertainment'],
         role: 'Solo developer',
         links: {
             demo: 'https://magical-minigames.vercel.app/',

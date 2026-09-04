@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title description">
+  <title id="title">Music Metadata Macro</title>
+  <desc id="description">A dark PowerShell-inspired illustration for the Music Metadata Macro automation project.</desc>
+  <rect width="640" height="360" fill="#081826"/>
+  <rect x="40" y="38" width="560" height="284" rx="18" fill="#0d2740" stroke="#5391fe" stroke-width="3"/>
+  <rect x="40" y="38" width="560" height="44" rx="18" fill="#163b61"/>
+  <circle cx="73" cy="60" r="7" fill="#ff6d5a"/><circle cx="97" cy="60" r="7" fill="#ffc45a"/><circle cx="121" cy="60" r="7" fill="#4fda68"/>
+  <text x="66" y="126" fill="#5391fe" font-family="Consolas, monospace" font-size="24" font-weight="700">PS&gt;</text>
+  <text x="128" y="126" fill="#eef6ff" font-family="Consolas, monospace" font-size="24">clean-music-library</text>
+  <path d="M78 220c24-66 48 66 72 0s48 66 72 0 48 66 72 0 48 66 72 0 48 66 72 0" fill="none" stroke="#4fda68" stroke-width="8" stroke-linecap="round"/>
+  <path d="M499 140v87a22 22 0 1 1-12-20v-54l62-16v74a22 22 0 1 1-12-20v-52z" fill="#eef6ff"/>
+  <text x="66" y="291" fill="#eef6ff" font-family="Arial, sans-serif" font-size="28" font-weight="700">Music Metadata Macro</text>
+</svg>

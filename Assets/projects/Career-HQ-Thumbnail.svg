@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title description">
+  <title id="title">Career HQ</title>
+  <desc id="description">A dark dashboard-style illustration for the Career HQ AI automation project.</desc>
+  <rect width="640" height="360" fill="#101827"/>
+  <rect x="36" y="35" width="568" height="290" rx="18" fill="#182235" stroke="#4fda68" stroke-width="3"/>
+  <rect x="65" y="70" width="190" height="18" rx="9" fill="#4fda68"/>
+  <rect x="65" y="108" width="220" height="14" rx="7" fill="#4a5a70"/>
+  <rect x="65" y="142" width="232" height="134" rx="12" fill="#222e44"/>
+  <rect x="321" y="142" width="248" height="38" rx="10" fill="#4fda68" opacity=".9"/>
+  <rect x="321" y="197" width="248" height="16" rx="8" fill="#4a5a70"/>
+  <rect x="321" y="229" width="182" height="16" rx="8" fill="#4a5a70"/>
+  <circle cx="121" cy="209" r="30" fill="#4fda68"/>
+  <path d="M111 209h20M121 199v20" stroke="#101827" stroke-width="6" stroke-linecap="round"/>
+  <text x="65" y="302" fill="#eef6ff" font-family="Arial, sans-serif" font-size="32" font-weight="700">Career HQ</text>
+  <text x="321" y="168" fill="#101827" font-family="Arial, sans-serif" font-size="16" font-weight="700">AI-GUIDED WORKFLOW</text>
+</svg>

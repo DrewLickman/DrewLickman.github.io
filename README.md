@@ -2,14 +2,14 @@
 
 Live site: `https://drewlickman.github.io/`
 
-A responsive, single-page portfolio site focused on **IT Specialist / tech support**—with projects, experience, and a recruiter-friendly contact flow.
+A responsive, single-page portfolio for an **AI Automation Engineer** and **Interactive Entertainment Engineer**, with projects, experience, and a recruiter-friendly contact flow.
 
 ## Features
 
 - **Responsive single-page layout** (anchor nav + smooth scrolling)
 - **Light/Dark mode toggle**
 - **Projects**
-  - Category filters
+  - AI & Automation, Interactive Entertainment, and Web Apps filters
   - Clickable project cards with a **details modal** (problem/solution/impact/stack/links)
 - **Experience & Education**
   - Compact 2–3 line summaries
@@ -38,6 +38,12 @@ A responsive, single-page portfolio site focused on **IT Specialist / tech suppo
 ## Local development
 
 You can open `index.html` directly in a browser.
+
+Run the dependency-free regression check before publishing:
+
+```bash
+npm test
+```
 
 If you want to rebuild Tailwind output:
 

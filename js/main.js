@@ -189,19 +189,17 @@ function initTypingEffect() {
     
     if (!typingText) return;
     if (prefersReducedMotion()) {
-        typingText.textContent = 'Tech Support';
+        typingText.textContent = 'AI Automation & Interactive Entertainment';
         if (cursor) cursor.style.display = 'none';
         return;
     }
     
     const phrases = [
-        'Tech Support',
-        'Python',
-        'JavaScript',
-        'C#',
-        'Machine Learning',
-        'NLP',
-        'Game Development'
+        'AI Automation',
+        'Workflow Tools',
+        'Interactive Entertainment',
+        'Game Systems',
+        'Web Experiences'
     ];
     
     // Split text into grapheme clusters (handles emojis properly)
@@ -258,7 +256,7 @@ function initTypingEffect() {
         }
         
         // Blinking cursor
-        cursor.style.display = 'inline-block';
+        if (cursor) cursor.style.display = 'inline-block';
         
         // Use faster speed for emojis to make them appear instantly
         let typeSpeed = isDeleting ? 50 : 100;
@@ -463,6 +461,30 @@ function animateParticle(particle) {
 
 // Project filtering functionality
 function initProjectFilter() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    const projectOrder = [
+        'career_hq',
+        'bitcoin_trader',
+        'music_metadata_macro',
+        'mtg_deck_analyzer',
+        'magical_minigames',
+        'code_runner',
+        'nlp_pipelines',
+        'ngram_language_model',
+        'speed_reader_app',
+        'random_generator_app'
+    ];
+
+    if (projectsGrid) {
+        const cardsById = new Map(
+            [...projectsGrid.querySelectorAll('.project-card')].map((card) => [card.getAttribute('data-project-id'), card])
+        );
+        projectOrder.forEach((projectId) => {
+            const card = cardsById.get(projectId);
+            if (card) projectsGrid.appendChild(card);
+        });
+    }
+
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     
@@ -481,7 +503,8 @@ function initProjectFilter() {
             
             // Filter projects instantly (no delayed animation)
             projectCards.forEach(card => {
-                const shouldShow = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+                const categories = (card.getAttribute('data-categories') || '').split(/\s+/);
+                const shouldShow = filterValue === 'all' || categories.includes(filterValue);
                 card.style.display = shouldShow ? 'block' : 'none';
                 card.style.opacity = '';
                 card.style.transform = '';
