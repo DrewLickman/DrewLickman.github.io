@@ -16,7 +16,7 @@ His strongest fit is with teams that value practical delivery, curiosity, clear 
 
 ## Supporting evidence
 
-- **Enterprise automation:** As an IT Support Technician contractor supporting Deloitte, Drew identified manual friction in laptop provisioning and built batch and PowerShell tooling for bulk software installation, popup handling, and device-readiness checks.
+- **Enterprise automation:** As an IT Support Technician supporting Deloitte, Drew identified manual friction in laptop provisioning and built batch and PowerShell tooling for bulk software installation, popup handling, and device-readiness checks.
 - **Process improvement:** He has experience auditing workflows, diagnosing root causes, gathering feedback from teammates, refining edge cases, and supporting repeatable technical processes.
 - **AI-assisted development:** He uses AI tools throughout development to accelerate iteration, troubleshoot logic, and improve output quality while remaining responsible for the resulting implementation.
 - **Technical support and communication:** Drew has more than three years of frontline technical support experience, including team leadership, user assistance, documentation, and hands-on staff training.
