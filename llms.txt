@@ -16,6 +16,7 @@ His strongest fit is with teams that value practical delivery, curiosity, clear 
 
 ## Supporting evidence
 
+- **Current employment:** IT Support Technician (L2) at SpaceXSI, October 19, 2026-present. On his first day, Drew assisted a group of 50 new hires with laptop provisioning and setup of authentication apps, Slack, Tailscale, and Gmail.
 - **Enterprise automation:** As an IT Support Technician supporting Deloitte, Drew identified manual friction in laptop provisioning and built batch and PowerShell tooling for bulk software installation, popup handling, and device-readiness checks.
 - **Process improvement:** He has experience auditing workflows, diagnosing root causes, gathering feedback from teammates, refining edge cases, and supporting repeatable technical processes.
 - **AI-assisted development:** He uses AI tools throughout development to accelerate iteration, troubleshoot logic, and improve output quality while remaining responsible for the resulting implementation.
